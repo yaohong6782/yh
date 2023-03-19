@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon";
+import type { Tech } from "../lib";
+
+export interface Props {
+  title: string;
+  technologies: Tech[];
+}
+
+const { title, technologies } = Astro.props;
+---
+
+
+<div>
+  <h3 class="pt-1">
+    <span class="bg-slate-200 border-8 rounded-lg">{title}</span>
+  </h3>
+</div>
+<ul class="grid grid-cols-5 lg:grid-cols-8 gap-6 items-center py-8 ">
+<!-- <ul class"grid grid-cols-4 gap-10 items-center py-5 xl:grid-cols-10" > -->
+  {
+    technologies.map((tech) => (
+      <li class="group flex flex-col items-center">
+        <Icon name={tech.icon} class="h-10 w-auto" /> <span class="opacity-50 group-hover:opacity-100 duration-300">{tech.name}</span>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+    h3{
+        font-weight: 500;
+        color:#6B728E;
+    }
+</style>

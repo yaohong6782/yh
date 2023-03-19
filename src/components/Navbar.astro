@@ -1,0 +1,34 @@
+---
+const sections = [
+  {
+    anchor: "#about",
+    name: "About",
+  },
+  {
+    anchor: "#content",
+    name: "Content",
+  },
+  {
+    anchor: "#sandbox",
+    name: "SandBox"
+  }
+];
+---
+
+<nav>
+  <div>
+    <ul class="navbar flex text-base md:text-md md:gap-4">
+      {
+        sections.map((section) => (
+          <li>
+            <a href={section.anchor} class="flex pr-4 hover:bg-slate-400 place-self-center">{section.name}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
+<style>
+    
+</style>

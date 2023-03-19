@@ -1,0 +1,33 @@
+---
+// import Technology from "./Technology.astro";
+import { Image } from "@astrojs/image/components";
+import { social, Socials } from "../lib";
+import me from "../images/me-test.png";
+import Icon from "astro-icon";
+---
+
+<section id="about" class="wrapper flex items-center justify-between">
+  <div class="introduction">
+    <h1 class="text-5xl">Hello! I'm <b>Yao Hong</b></h1>
+    <p class="role text-xl pt-4">Software Developer / Front-End </p>
+  </div>
+  <!-- {
+    social.map((item) => {
+        <Icon />
+    })
+  } -->
+  <Image src={me} alt="me" height={100} class="rounded-full"/>
+</section>
+
+<style>
+  h1 {
+    font-size: 32px;
+  }
+
+  .wrapper {
+    height: 60vh; 
+    /* display:flex;
+    overflow: hidden; */
+    /* align-items: center; */
+  }
+</style>

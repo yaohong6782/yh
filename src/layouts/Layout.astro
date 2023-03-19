@@ -1,35 +1,46 @@
 ---
+import Navbar from "../components/Navbar.astro";
 export interface Props {
-	title: string;
+  title: String;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" class="smooth-scroll">
+  <head>
+    <title>{title}</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body class="wrapper page">
+    <main class="m-auto max-w-6xl">
+      <slot />
+    </main>
+    <style>
+      .page {
+        background-color: #eff5f5;
+        /* animation: 10s infinite alternate ease-out breathing-color--dark; */
+      }
+      /* @keyframes breathing-color--dark {
+        from {
+          background-color: #eff5f5;
+        }
+        to {
+          background-color: #eff5f5(0, 0%, 10%);
+        }
+      } */
+    </style>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  /* .wrapper {
+    margin: auto;
+  } */
 </style>
