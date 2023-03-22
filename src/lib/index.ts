@@ -12,7 +12,14 @@ export const technologies: Tech[] = [
     icon: "logos:javascript",
     expertise: "utilised",
     skill: "language",
-    description: "TypeScript killed me",
+    description: "Typescript implicity type any",
+  },
+  {
+    name: "Typescript",
+    icon: "logos:typescript-icon",
+    expertise: "utilised",
+    skill: "language",
+    description: "Strict",
   },
   {
     name: "Python",

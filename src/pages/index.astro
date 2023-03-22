@@ -8,6 +8,7 @@ import { technologies, sortingVisualiserTech } from "../lib";
 import Sandbox from "../components/Sandbox.astro";
 
 import "../styles/global.css";
+import Work from "../components/Work.astro";
 ---
 
 <Layout title="Yao Hong">
@@ -20,7 +21,7 @@ import "../styles/global.css";
       technologies={technologies.filter((tech) => tech.skill === "language")}
     />
     <Technology
-      title="Dabbled / Experienced"
+      title="Experienced"
       technologies={technologies.filter((tech) => tech.skill === "library")}
     />
   </section>
@@ -32,6 +33,12 @@ import "../styles/global.css";
       technologies={sortingVisualiserTech}
       demo="https://sorting-visualiser-738ffc.netlify.app/"
       github="https://github.com/yaohong6782/sorting-visualiser"
+    />
+  </section>
+
+  <section id="work" class="pt-15">
+    <Work
+      title="Intern"
     />
   </section>
   <div class="pb-48"></div>
