@@ -3,8 +3,53 @@ import { Icon } from "astro-icon";
 import type { Tech } from "../lib";
 
 export interface Props {
-    title: string;
-    // responsibility: string;
+  title?: string;
+  //   technologies: Tech[];
+  company: string;
+  responsibility: string[];
 }
-const { title, technologies } = Astro.props;
+const { title, company, responsibility } = Astro.props;
 ---
+
+<div>
+  <h1 class="pt-1 pb-2 text-xl">
+    {company}
+  </h1>
+  <h3 class="pt-1 pb-4">
+    <span class="bg-slate-200 border-8 rounded-lg">{title}</span>
+  </h3>
+
+  <div class="flex flex-col group pr-6 pb-4">
+    {
+      responsibility.map((res) => {
+        return (
+          <li>
+            <span>{res}</span>
+          </li>
+        );
+      })
+    }
+  </div>
+
+  <h3 class="pt-0 pb-6">
+    <span class="underline md:underline-offset-4">Tech Stack</span>
+  </h3>
+  <!-- work here -->
+  <!-- <div class="px-6 pt-4 pb-2 flex">
+    {
+      technologies
+        .slice()
+        .reverse()
+        .map((tech) => {
+          return (
+            <div class="flex flex-col items-center group pr-6">
+              <Icon name={tech.icon} class="flex h-8 w-10" />
+              <span>
+                {tech.name}
+              </span>
+            </div>
+          );
+        })
+    }
+  </div> -->
+</div>

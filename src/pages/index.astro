@@ -4,7 +4,13 @@ import About from "../components/About.astro";
 import Technology from "../components/Technology.astro";
 import Navbar from "../components/Navbar.astro";
 
-import { technologies, sortingVisualiserTech } from "../lib";
+import {
+  technologies,
+  sortingVisualiserTech,
+  Experiences,
+  workTechStack,
+  internTechStack,
+} from "../lib";
 import Sandbox from "../components/Sandbox.astro";
 
 import "../styles/global.css";
@@ -26,7 +32,7 @@ import Work from "../components/Work.astro";
     />
   </section>
   <section id="sandbox" class="pt-15">
-    <h1 class="font-headline pb-2">Experiments</h1>
+    <h1 class="font-headline pb-2">Sandbox</h1>
 
     <Sandbox
       title="Sorting Visualiser"
@@ -35,11 +41,25 @@ import Work from "../components/Work.astro";
       github="https://github.com/yaohong6782/sorting-visualiser"
     />
   </section>
-
+  <br />
+  <h1 class="font-headline pb-2">Experience</h1>
   <section id="work" class="pt-15">
-    <Work
-      title="Intern"
-    />
+    {
+      Experiences.slice()
+        .reverse()
+        .map((obj) => {
+          return (
+            obj.responsibility && (
+              <Work
+                title={obj.description}
+                company={obj.name}
+                responsibility={obj.responsibility}
+              />
+            )
+          );
+        })
+    }
+    <!-- <Work title="Software Engineer" technologies={internTechStack} company={Experiences[0].name}/> -->
   </section>
   <div class="pb-48"></div>
 </Layout>
