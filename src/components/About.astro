@@ -6,10 +6,10 @@ import me from "../images/me-test.png";
 import Icon from "astro-icon";
 ---
 
-<section id="about" class="wrapper flex items-center justify-between">
+<section id="about" class="wrapper flex items-center justify-around">
   <div class="introduction">
     <h1 class="text-5xl">Hello! I'm <b>Yao Hong</b></h1>
-    <p class="role text-xl pt-4">Software Developer / Front-End </p>
+    <p class="role text-xl pt-4">Linkedin / Github</p>
   </div>
   <!-- {
     social.map((item) => {
@@ -18,14 +18,13 @@ import Icon from "astro-icon";
   } -->
   <Image src={me} alt="me" height={100} class="rounded-full"/>
 </section>
-
 <style>
   h1 {
     font-size: 32px;
   }
 
   .wrapper {
-    height: 60vh; 
+    height: 100vh; 
     /* display:flex;
     overflow: hidden; */
     /* align-items: center; */

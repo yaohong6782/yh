@@ -121,7 +121,7 @@ export interface Work {
   duration: string;
   description?: string;
   responsibility?: string[] | undefined;
-  skills?: string[]; 
+  skills?: string[];
   techStack?: Tech[] | undefined;
 }
 
@@ -156,7 +156,6 @@ export const Experiences: Work[] = [
     responsibility: [
       "Tech Refresh - Upgrade of Client's business application to up to date framework for maintainability",
       "Built reusable components to reduce duplication and improve readability",
-      "Work on End to End development",
     ],
     techStack: [],
   },
