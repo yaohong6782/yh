@@ -37,9 +37,9 @@ const { title, company, responsibility, duration, techStack } = Astro.props;
   <h3 class="pt-0 pb-6">
     <span class="underline md:underline-offset-4">Tech Stack</span>
   </h3>
-  <!-- <div class="px-6 pt-4 pb-2 flex">
+  <div class="pb-2 flex">
     {
-      technologies
+      techStack
         .slice()
         .reverse()
         .map((tech) => {
@@ -53,5 +53,5 @@ const { title, company, responsibility, duration, techStack } = Astro.props;
           );
         })
     }
-  </div> -->
+  </div>
 </div>

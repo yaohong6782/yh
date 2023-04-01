@@ -48,22 +48,19 @@ import Work from "../components/Work.astro";
   <h1 class="font-headline pb-2">Experience</h1>
   <section id="work" class="pt-15">
     {
-      Experiences.slice()
-        .reverse()
-        .map((obj) => {
-          return (
-            obj.responsibility && (
-              <Work
-                title={obj.description}
-                duration={obj.duration}
-                company={obj.name}
-                responsibility={obj.responsibility}
-                techStack={obj.techStack}
-
-              />
-            )
-          );
-        })
+      Experiences.map((obj) => {
+        return (
+          obj.responsibility && (
+            <Work
+              title={obj.description}
+              duration={obj.duration}
+              company={obj.name}
+              responsibility={obj.responsibility}
+              techStack={obj.techStack}
+            />
+          )
+        );
+      })
     }
     <!-- <Work title="Software Engineer" technologies={internTechStack} company={Experiences[0].name}/> -->
   </section>

@@ -1,4 +1,3 @@
-
 type Socials = Array<String>;
 
 export const socials: Socials = ["mdi:github"];
@@ -47,7 +46,7 @@ export const technologies: Tech[] = [
     expertise: "utilised",
     skill: "language",
     description: "work",
-    intern: true,
+    intern: false,
     work: true,
   },
   {
@@ -95,7 +94,7 @@ export const technologies: Tech[] = [
     expertise: "utilised",
     skill: "library",
     description: "work",
-    intern: true,
+    intern: false,
     work: true,
   },
   {
@@ -132,28 +131,6 @@ export interface Work {
 
 export const Experiences: Work[] = [
   {
-    name: "Onwards Media Group",
-    role: "intern",
-    duration: "Nov 2017 - Feb 2018",
-    description: "Intern",
-    responsibility: [
-      "Implement Trueface API for facial recognition",
-      "UAT documentation and testcases",
-    ],
-    techStack: internTechStack,
-  },
-  {
-    name: "Changi Airport Group (CAG)",
-    role: "student",
-    duration: "Aug 2017 - Oct 2017",
-    description: "IOT System",
-    responsibility: [
-      "Built an IOT system for monitoring of soil acidity",
-      "Developed web application to consume hardware input through APIs and setting a threshold warning to Client",
-    ],
-    techStack: [],
-  },
-  {
     name: "NCS Pte Ltd",
     role: "SWE",
     duration: "Jun 2022 - Present",
@@ -161,6 +138,30 @@ export const Experiences: Work[] = [
     responsibility: [
       "Tech Refresh - Upgrade of Client's business application to up to date framework for maintainability",
       "Built reusable components to reduce duplication and improve readability",
+    ],
+    techStack: workTechStack,
+  },
+
+  {
+    name: "Onwards Media Group",
+    role: "intern",
+    duration: "Nov 2017 - Feb 2018",
+    description: "Software Engineer Intern",
+    responsibility: [
+      "Implement Trueface API for facial recognition",
+      "UAT documentation and testcases",
+    ],
+    techStack: internTechStack,
+  },
+
+  {
+    name: "Changi Airport Group (CAG)",
+    role: "student",
+    duration: "Aug 2017 - Oct 2017",
+    description: "Student Developer",
+    responsibility: [
+      "Built an IOT system for monitoring of soil acidity",
+      "Developed web application to consume hardware input through APIs and setting a threshold warning to Client",
     ],
     techStack: [],
   },
