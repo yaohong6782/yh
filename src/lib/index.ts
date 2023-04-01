@@ -1,3 +1,8 @@
+
+type Socials = Array<String>;
+
+export const socials: Socials = ["mdi:github"];
+
 export interface Tech {
   name: string;
   icon: string;
@@ -122,7 +127,7 @@ export interface Work {
   description?: string;
   responsibility?: string[] | undefined;
   skills?: string[];
-  techStack?: Tech[] | undefined;
+  techStack: Tech[];
 }
 
 export const Experiences: Work[] = [
@@ -167,15 +172,3 @@ export interface Img {
 export const randomImage: Img = {
   icon: "logos:github-icon",
 };
-
-export interface Socials {
-  name: string;
-  icon: string;
-}
-
-export const social: Socials[] = [
-  {
-    name: "Linkedin",
-    icon: "ion:logo-linkedin",
-  },
-];

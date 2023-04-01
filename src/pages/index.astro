@@ -10,6 +10,7 @@ import {
   Experiences,
   workTechStack,
   internTechStack,
+  socials,
 } from "../lib";
 import Sandbox from "../components/Sandbox.astro";
 
@@ -19,7 +20,7 @@ import Work from "../components/Work.astro";
 
 <Layout title="Yao Hong">
   <Navbar />
-  <About />
+  <About socials={socials} />
   <!-- <Introduction/> -->
 
   <section id="content" class="pt-6">
@@ -54,8 +55,11 @@ import Work from "../components/Work.astro";
             obj.responsibility && (
               <Work
                 title={obj.description}
+                duration={obj.duration}
                 company={obj.name}
                 responsibility={obj.responsibility}
+                techStack={obj.techStack}
+
               />
             )
           );

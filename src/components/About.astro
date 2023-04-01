@@ -1,22 +1,30 @@
 ---
 // import Technology from "./Technology.astro";
 import { Image } from "@astrojs/image/components";
-import { social, Socials } from "../lib";
 import me from "../images/me-test.png";
 import Icon from "astro-icon";
+import { socials } from "../lib";
 ---
 
 <section id="about" class="wrapper flex items-center justify-around">
   <div class="introduction">
     <h1 class="text-5xl">Hello! I'm <b>Yao Hong</b></h1>
-    <p class="role text-xl pt-4">Linkedin / Github</p>
+    {
+      socials.map((social) => (
+        <div class="flex pt-3">
+          <a
+            href="https://github.com/yaohong6782"
+            target="_blank"
+            rel="noopener"
+          >
+            <Icon name={social} size={28} />
+          </a>
+        </div>
+      ))
+    }
   </div>
-  <!-- {
-    social.map((item) => {
-        <Icon />
-    })
-  } -->
-  <Image src={me} alt="me" height={100} class="rounded-full"/>
+
+  <Image src={me} alt="me" height={100} class="rounded-full" />
 </section>
 <style>
   h1 {
@@ -24,7 +32,7 @@ import Icon from "astro-icon";
   }
 
   .wrapper {
-    height: 100vh; 
+    height: 100vh;
     /* display:flex;
     overflow: hidden; */
     /* align-items: center; */
