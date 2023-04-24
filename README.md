@@ -1,3 +1,3 @@
 # Its Me
 Me in Astro
-[An Internal Link](https://www.yaohong.me/)
+[Yao Hong](https://www.yaohong.me/)
