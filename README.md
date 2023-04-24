@@ -1,3 +1,4 @@
 # Its Me
 Me in Astro
-[Yao Hong](https://www.yaohong.me/)
+
+You can view my Astro profile by clicking [here].(https://www.yaohong.me/)
