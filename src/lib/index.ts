@@ -137,7 +137,8 @@ export const Experiences: Work[] = [
     description: "Software Engineer",
     responsibility: [
       "Tech Refresh - Upgrade of Client's business application to up to date framework for maintainability",
-      "Built reusable components to reduce duplication and improve readability",
+      "Built reusable components to improve readability and usability",
+      "Reduced code smells by refractoring and adhering to SRP and SOLID principles"
     ],
     techStack: workTechStack,
   },
