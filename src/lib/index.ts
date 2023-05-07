@@ -1,6 +1,6 @@
 type Socials = Array<String>;
 
-export const socials: Socials = ["mdi:github"];
+export const socials: Socials = ["cib:github", "cib:linkedin"];
 
 export interface Tech {
   name: string;
@@ -171,6 +171,3 @@ export const Experiences: Work[] = [
 export interface Img {
   icon: string;
 }
-export const randomImage: Img = {
-  icon: "logos:github-icon",
-};
