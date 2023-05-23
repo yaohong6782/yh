@@ -1,7 +1,7 @@
 ---
 const sections = [
   {
-    anchor: "#about",
+    anchor: "#introduction",
     name: "About",
   },
   {
@@ -15,16 +15,20 @@ const sections = [
 ];
 ---
 
-<header>
-  <nav class="flex justify-between text-2xl font-robotoSlab">
-    <ul class="left-item">
-      <li class="pt-3 ml-5 font-robotoSlab">It's Me!</li>
+<header class="sticky top-0 z-50">
+  <nav
+    class="flex justify-between text-xl font-acme border-b pb-3 bg-white dark:border-b-slate-800"
+  >
+    <ul class="left-item items-center">
+      <li class="pt-3 ml-5">It's Me!</li>
     </ul>
-    <ul class="flex gap-4 right-item pt-3 mr-5">
+    <ul class="flex gap-4 right-item items-center pt-3 mr-5 ">
       {
-        sections.map((section, idx) => {
-          return <li>{section.name}</li>;
-        })
+        sections.map((section) => (
+          <li>
+            <a href={section.anchor}>{section.name}</a>
+          </li>
+        ))
       }
     </ul>
   </nav>
