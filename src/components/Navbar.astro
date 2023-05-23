@@ -10,25 +10,23 @@ const sections = [
   },
   {
     anchor: "#sandbox",
-    name: "SandBox"
-  }
+    name: "SandBox",
+  },
 ];
 ---
 
-<nav>
-  <div>
-    <ul class="navbar flex text-base md:text-md md:gap-4">
+<header>
+  <nav class="flex justify-between text-2xl font-robotoSlab">
+    <ul class="left-item">
+      <li class="pt-3 ml-5 font-robotoSlab">It's Me!</li>
+    </ul>
+    <ul class="flex gap-4 right-item pt-3 mr-5">
       {
-        sections.map((section) => (
-          <li>
-            <a href={section.anchor} class="flex pr-4 hover:bg-slate-400 place-self-center">{section.name}</a>
-          </li>
-        ))
+        sections.map((section, idx) => {
+          return <li>{section.name}</li>;
+        })
       }
     </ul>
-  </div>
-</nav>
-
-<style>
-    
-</style>
+  </nav>
+</header>
+<style></style>
