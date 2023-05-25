@@ -1,29 +1,49 @@
-<section id="introduction" class="wrapper flex items-center justify-between">
-  <div class="introduction">
-    <p class="pt-1 pb-3">
-      <span class="text-lg text-slate-800">
-        Welcome to my humble abode that's made in
-        <a href="https://astro.build" target="_blank"
-          ><span
-            class="underline underline-offset-4 font-bold hover:translate-y-1 hover:transition-transform"
-            >Astro</span
-          ></a
-        >
-      </span>
-    </p>
+---
+// import Technology from "./Technology.astro";
+import { Image } from "@astrojs/image/components";
+import me from "../images/me-test.png";
+import Icon from "astro-icon";
+import { socials } from "../lib";
+---
 
-    <p class="text-lg text-slate-800 pb-3">
-      I'm currently a Software Engineer which enjoys <b>Front-end Development</b
-      >
-    </p>
-    <p class="text-lg text-slate-800 pb-2">
-      Mainly self-taught, I have my friends to thank for this journey, I'm diving into <b>FullStack</b> and exploring the world of
-      Web development
-    </p>
+<section class="wrapper flex items-center justify-around">
+  <div class="about">
+    <h1 class="text-5xl">Hello! I'm <b>Yao Hong</b></h1>
+    <!-- {
+      socials.map((social) => (
+        <div class="flex flex-row pt-3">
+          <a
+            href="https://github.com/yaohong6782"
+            target="_blank"
+            rel="noopener"
+          >
+            <Icon name={social} size={28} />
+          </a>
+          
+        </div>
+      ))
+    } -->
+    <div class="flex flex-row gap-2 pt-3">
+      <a href="https://github.com/yaohong6782" target="_blank" rel="noopener">
+        <Icon name={"cib:github"} size={28} />
+      </a>
+      <a href="https://www.linkedin.com/in/yao-hong/" target="_blank" rel="noopener">
+        <Icon name={"cib:linkedin"} size={28} />
+      </a>
+    </div>
   </div>
-  <style>
-    h1 {
-      font-size: 32px;
-    }
-  </style>
+
+  <Image src={me} alt="me" height={100} class="rounded-full" />
 </section>
+<style>
+  h1 {
+    font-size: 32px;
+  }
+
+  .wrapper {
+    height: 100vh;
+    /* display:flex;
+    overflow: hidden; */
+    /* align-items: center; */
+  }
+</style>
