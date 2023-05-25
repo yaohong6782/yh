@@ -37,7 +37,11 @@ const { title, company, responsibility, duration, techStack } = Astro.props;
   </div>
 
   <h3 class="pt-0 pb-6">
-    {techStack.length > 0 && <span class="underline md:underline-offset-4">Tech Stack</span>}
+    {
+      techStack.length > 0 && (
+        <span class="underline md:underline-offset-4">Tech Stack</span>
+      )
+    }
   </h3>
   <div class="pb-2 flex">
     {
@@ -46,7 +50,8 @@ const { title, company, responsibility, duration, techStack } = Astro.props;
         .reverse()
         .map((tech) => {
           return (
-            <div class="flex flex-col items-center group pr-6">
+            // <div class="flex flex-col items-center group pr-6">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <Icon name={tech.icon} class="flex h-8 w-10" />
               <span>{tech.name}</span>
             </div>
