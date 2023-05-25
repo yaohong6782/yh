@@ -20,7 +20,7 @@ export const technologies: Tech[] = [
     skill: "language",
     description: "work",
     intern: true,
-    work: true,
+    work: false,
   },
   {
     name: "Typescript",
