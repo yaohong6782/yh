@@ -89,8 +89,8 @@ export const technologies: Tech[] = [
     description: "misc",
   },
   {
-    name: "mySQL",
-    icon: "vscode-icons:file-type-mysql",
+    name: "SQL",
+    icon: "mdi:sql-query",
     expertise: "utilised",
     skill: "library",
     description: "work",
