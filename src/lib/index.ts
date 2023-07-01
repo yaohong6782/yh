@@ -136,9 +136,9 @@ export const Experiences: Work[] = [
     duration: "Jun 2022 - Present",
     description: "Software Engineer",
     responsibility: [
-      "Tech Refresh - Upgrade of Client's business application to up to date framework for maintainability",
-      "Built reusable components to improve readability and usability",
-      "Reduced code smells by refractoring and adhering to SRP and SOLID principles"
+      "Collaborated with a team to upgrade the client's business application to a modern framework, ensuring it remains up-to-date and maintainable",
+      "Created reusable components enhancing readability and usability of the application, improving the overall user experience.",
+      "Refactoring code and following principles such as SRP and SOLID, reducing code smells and improved code quality",
     ],
     techStack: workTechStack,
   },
