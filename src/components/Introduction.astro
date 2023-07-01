@@ -1,49 +1,43 @@
 ---
 // import Technology from "./Technology.astro";
 import { Image } from "@astrojs/image/components";
-import me from "../images/me-test.png";
+import me from "@/images/me.png";
 import Icon from "astro-icon";
-import { socials } from "../lib";
 ---
 
 <section class="wrapper flex items-center justify-around">
-  <div class="about">
-    <h1 class="text-5xl">Hello! I'm <b>Yao Hong</b></h1>
-    <!-- {
-      socials.map((social) => (
-        <div class="flex flex-row pt-3">
-          <a
-            href="https://github.com/yaohong6782"
-            target="_blank"
-            rel="noopener"
-          >
-            <Icon name={social} size={28} />
-          </a>
-          
+    <div class="about">
+        <h1 class="text-5xl">Hello! I'm <b>Yao Hong</b></h1>
+        <div class="flex flex-row gap-2 pt-3">
+            <a
+                href="https://github.com/yaohong6782"
+                target="_blank"
+                rel="noopener"
+            >
+                <Icon name={"cib:github"} size={28} />
+            </a>
+            <a
+                href="https://www.linkedin.com/in/yao-hong/"
+                target="_blank"
+                rel="noopener"
+            >
+                <Icon name={"cib:linkedin"} size={28} />
+            </a>
         </div>
-      ))
-    } -->
-    <div class="flex flex-row gap-2 pt-3">
-      <a href="https://github.com/yaohong6782" target="_blank" rel="noopener">
-        <Icon name={"cib:github"} size={28} />
-      </a>
-      <a href="https://www.linkedin.com/in/yao-hong/" target="_blank" rel="noopener">
-        <Icon name={"cib:linkedin"} size={28} />
-      </a>
     </div>
-  </div>
+    
+    <Image src={me} alt="My Image" height={100} width={100} class="rounded-full" />
 
-  <Image src={me} alt="me" height={100} class="rounded-full" />
 </section>
 <style>
-  h1 {
-    font-size: 32px;
-  }
+    h1 {
+        font-size: 32px;
+    }
 
-  .wrapper {
-    height: 100vh;
-    /* display:flex;
+    .wrapper {
+        height: 100vh;
+        /* display:flex;
     overflow: hidden; */
-    /* align-items: center; */
-  }
+        /* align-items: center; */
+    }
 </style>
