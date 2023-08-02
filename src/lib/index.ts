@@ -156,7 +156,7 @@ export const Experiences: Work[] = [
   },
 
   {
-    name: "Changi Airport Group",
+    name: "Temasek Polytechnic",
     role: "student",
     duration: "Aug 2017 - Oct 2017",
     description: "Student Developer",
