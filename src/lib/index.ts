@@ -133,12 +133,12 @@ export const Experiences: Work[] = [
   {
     name: "NCS Pte Ltd",
     role: "SWE",
-    duration: "Jun 2022 - Present",
+    duration: "Nov 2022 - Present",
     description: "Software Engineer",
     responsibility: [
-      "Collaborated with a team to upgrade the client's business application to a modern framework, ensuring it remains up-to-date and maintainable",
-      "Created reusable components enhancing readability and usability of the application, improving the overall user experience.",
-      "Refactoring code and following principles such as SRP and SOLID, reducing code smells and improved code quality",
+      "End to End development of client's application to latest framework and interface to enhance maintanability and usability",
+      "Developed Front-end and Back-End business logic APIs aligning with current existing system",
+      "Created reusable components for development enhancing readabilty, improving development process."
     ],
     techStack: workTechStack,
   },
