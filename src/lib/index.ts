@@ -133,7 +133,7 @@ export const Experiences: Work[] = [
   {
     name: "NCS Pte Ltd",
     role: "SWE",
-    duration: "Nov 2022 - Present",
+    duration: "Jun 2022 - Present",
     description: "Software Engineer",
     responsibility: [
       "End to End development of client's application to latest framework and interface to enhance maintanability and usability",
