@@ -82,13 +82,6 @@ export const technologies: Tech[] = [
     description: "misc",
   },
   {
-    name: "MongoDB",
-    icon: "vscode-icons:file-type-mongo",
-    expertise: "utilised",
-    skill: "library",
-    description: "misc",
-  },
-  {
     name: "SQL",
     icon: "mdi:sql-query",
     expertise: "utilised",
@@ -104,6 +97,24 @@ export const technologies: Tech[] = [
     skill: "library",
     description: "work",
     intern: true,
+    work: true,
+  },
+  {
+    name: "OpenAPI",
+    icon: "logos:swagger",
+    expertise: "utilised",
+    skill: "library",
+    description: "work",
+    intern: false,
+    work: true,
+  },
+  {
+    name: "Spring",
+    icon: "logos:spring-icon",
+    expertise: "utilised",
+    skill: "library",
+    description: "work",
+    intern: false,
     work: true,
   },
 ];
@@ -136,9 +147,10 @@ export const Experiences: Work[] = [
     duration: "Jun 2022 - Present",
     description: "Software Engineer",
     responsibility: [
-      "End to End development of client's application to latest framework and interface to enhance maintanability and usability",
+      "Full stack development utilising React, Spring",
       "Developed Front-end and Back-End business logic APIs aligning with current existing system",
-      "Created reusable components for development enhancing readabilty, improving development process."
+      "Created reusable components for development enhancing readabilty, improving development process.",
+      "Handling service request and enhancement for everchanging business needs and requirements"
     ],
     techStack: workTechStack,
   },
@@ -153,18 +165,6 @@ export const Experiences: Work[] = [
       "UAT documentation and testcases",
     ],
     techStack: internTechStack,
-  },
-
-  {
-    name: "Temasek Polytechnic",
-    role: "student",
-    duration: "Aug 2017 - Oct 2017",
-    description: "Student Developer",
-    responsibility: [
-      "Built an IOT system for monitoring of soil acidity",
-      "Developed web application to consume hardware input through APIs and setting a threshold warning to Client",
-    ],
-    techStack: [],
   },
 ];
 

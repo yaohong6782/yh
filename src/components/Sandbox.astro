@@ -14,12 +14,15 @@ const { title, technologies, demo, github } = Astro.props;
 ---
 
 <div>
-  <h3 class="pt-1 pb-4">
-    <span class="bg-slate-200 border-8 rounded-lg text-xl text-slate-800">{title}</span>
+  <h3 class="pt-1 pb-3">
+    <span class="bg-slate-200 border-8 rounded-lg text-xl text-slate-800"
+      >{title}</span
+    >
   </h3>
 </div>
 
-<div class=" pt-6 rounded overflow-hidden shadow-md pt-2 max-w-6xl ">
+<div class="rounded overflow-hidden shadow-md pt-2 max-w-3xl">
+  <!-- <div class="grid"> -->
   <Image src={sortingVisualiser} alt="sorting" />
 
   <div class="px-6 pt-4 pb-2 flex">
@@ -29,43 +32,53 @@ const { title, technologies, demo, github } = Astro.props;
         .reverse()
         .map((tech) => {
           return (
-            <div class="flex flex-col items-center group pr-6">
-              <Icon name={tech.icon} class="flex h-8 w-10" />
-              <span class="opacity-0 group-hover:opacity-100 duration-300">
+            <div class="flex flex-col items-center group">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                 {tech.name}
               </span>
             </div>
           );
         })
     }
-    <div
-      class="flex items-center inline-block bg-blue-200 rounded-lg px-2 py-1 text-sm font-semibold text-gray-800 mr-2 mb-4"
+    <span
+      class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
     >
       <a href={github} target="_blank">Github</a>
-    </div>
-    <div
-      class="flex ml-6 items-center inline-block bg-red-200 rounded-lg px-2 py-1 text-sm font-semibold text-gray-800 mr-2 mb-4"
+    </span>
+    <span
+      class="inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+      ><a href={demo} target="_blank">Demo</a></span
     >
-      <a href={demo} target="_blank">Demo</a>
-    </div>
   </div>
 </div>
 
 <!-- <div class="max-w-sm rounded overflow-hidden shadow-lg">
-    <Image src={sortingVisualiser} alt="sorting" height={500} width={800}/>
-   
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-      <p class="text-gray-700 text-base">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-      </p>
-    </div>
-    <div class="px-6 pt-4 pb-2">
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-    </div>
-  </div> -->
+  <Image src={sortingVisualiser} alt="sorting" height={500} width={800} />
+
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+    <p class="text-gray-700 text-base">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+      quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
+      nihil.
+    </p>
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    <span
+      class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+    >
+      <a href={github} target="_blank">Github</a>
+    </span>
+    <span
+      class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+      >#travel</span
+    >
+    <span
+      class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+      >#winter</span
+    >
+  </div>
+</div> -->
 <style>
   h3 {
     /* font-weight: 500; */
