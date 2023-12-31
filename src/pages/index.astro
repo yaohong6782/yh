@@ -7,13 +7,17 @@ import Introduction from "../components/Introduction.astro";
 import {
   technologies,
   sortingVisualiserTech,
+  backendCodeStubTech,
+  backendCodeStubDesc,
   Experiences,
   socials,
 } from "../lib";
 import Sandbox from "@/components/Sandbox.astro";
 import Work from "../components/Work.astro";
-
+import sortingVisualiser from "../images/sorting-visualiser.png";
+import swaggerApi from "../images/swaggerAPI.png";
 import "../styles/global.css";
+
 ---
 
 <Navbar />
@@ -41,17 +45,7 @@ import "../styles/global.css";
       technologies={technologies.filter((tech) => tech.skill === "library")}
     />
   </section>
-  <section id="sandbox" class="pt-15 scroll-my-12">
-    <h1 class="font-headline pb-2">Sandbox</h1>
 
-    <Sandbox
-      title="Sorting Visualiser"
-      technologies={sortingVisualiserTech}
-      demo="https://sorting-visualiser-738ffc.netlify.app/"
-      github="https://github.com/yaohong6782/sorting-visualiser"
-    />
-  </section>
-  <br />
   <h1 class="font-headline pb-2">Experiences</h1>
   <section id="work" class="pt-15">
     {
@@ -71,6 +65,28 @@ import "../styles/global.css";
     }
     <!-- <Work title="Software Engineer" technologies={internTechStack} company={Experiences[0].name}/> -->
   </section>
+  <section id="sandbox" class="pt-15 scroll-my-12">
+    <h1 class="font-headline p-2">Sandbox</h1>
+
+    <Sandbox
+      title="Sorting Visualiser"
+      technologies={sortingVisualiserTech}
+      image={sortingVisualiser}
+      demo="https://sorting-visualiser-738ffc.netlify.app/"
+      github="https://github.com/yaohong6782/sorting-visualiser"
+    description={[]}
+    />
+    <br />
+    <Sandbox
+      title="Backend API Stub"
+      image={swaggerApi}
+      technologies={backendCodeStubTech}
+      demo=""
+      github="https://github.com/yaohong6782/tracker-backend"
+      description={backendCodeStubDesc}
+    />
+  </section>
+  <br />
 </Layout>
 
 <style>
@@ -80,8 +96,8 @@ import "../styles/global.css";
     /*  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
   }
 
-  .font-headline {
+  /* .font-headline {
     font-weight: 500;
     font-size: 26px;
-  }
+  } */
 </style>

@@ -130,6 +130,15 @@ export const workTechStack = technologies.filter((tech) => {
   return tech.work === true;
 });
 
+export const backendCodeStubTech = technologies.filter((tech) => {
+    return tech.name === "OpenAPI" || tech.name === "Java"
+});
+
+export const backendCodeStubDesc = [
+    "Code template written in Java Spring utilising OpenAPI generator for users to get started",
+    "Authentication and Authorisation implemented",
+    "Fully integratable to Front-End" 
+]
 export interface Work {
   name: string;
   role: "SWE" | "intern" | "student";
