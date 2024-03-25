@@ -1,0 +1,35 @@
+---
+
+const sectionItems = [
+  {
+    anchor:'#about',
+    name:"about"
+  }, 
+  {
+    anchor:'#content',
+    name:'content'
+  },
+  {
+    anchor:"#projects",
+    name: 'projects'
+  }
+]
+---
+
+<nav class="flex gap-3 justify-between">
+  <ul>
+    <li class="text-xl hover:underline underline-offset-8 cursor-pointer">yao hong</li>
+  </ul>
+  <ul class="text-xl flex gap-3 right-item items-center">
+    {sectionItems.map((section) => (
+      <li class="hover:underline underline-offset-8 cursor-pointer">
+        <a href={section.anchor}> 
+          {section.name}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+</style>
