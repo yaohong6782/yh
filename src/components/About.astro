@@ -1,0 +1,17 @@
+---
+import { Icon } from "astro-icon/components";
+import { socials } from "@src/lib/library.ts";
+---
+
+<div class="flex flex-col items-center justify-center">
+  <div class="flex gap-4 flex-row">
+    <h1>About Section here</h1>
+    <h1>Image here beside </h1>
+  </div>
+  <div class="flex flex-row gap-2 pt-2 pb-2 items-center">
+    {socials.map((social) => (
+      <Icon name={social} size={28} class="transform-gpu hover:scale-110 cursor-pointer"/>
+    ))}
+  </div>
+  <h1>LOl</h1>
+</div>

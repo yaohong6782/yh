@@ -1,10 +1,15 @@
 ---
+import '@fontsource/patrick-hand'
 
 const sectionItems = [
   {
     anchor:'#about',
     name:"about"
   }, 
+  {
+    anchor:'#experiences',
+    name: 'experiences'
+  },
   {
     anchor:'#content',
     name:'content'
@@ -18,11 +23,11 @@ const sectionItems = [
 
 <nav class="flex gap-3 justify-between">
   <ul>
-    <li class="text-xl hover:underline underline-offset-8 cursor-pointer">yao hong</li>
+    <li class="text-3xl text-nowrap items-left items-center hover:underline underline-offset-4 cursor-pointer font-patrick hover:scale-110">yao hong</li>
   </ul>
-  <ul class="text-xl flex gap-3 right-item items-center">
+  <ul class="text-2xl flex gap-5 right-item items-center font-patrick">
     {sectionItems.map((section) => (
-      <li class="hover:underline underline-offset-8 cursor-pointer">
+      <li class="hover:underline underline-offset-4 cursor-pointer hover:scale-110">
         <a href={section.anchor}> 
           {section.name}
         </a>

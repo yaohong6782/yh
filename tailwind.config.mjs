@@ -6,9 +6,10 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Overpass Variable", ...defaultTheme.fontFamily.sans],
+        patrick: ["Patrick Hand", "cursive"],
       },
       screens: {
-        lg: "1280px",
+        lg: "1680px",
         md: "768px",
       },
     },
