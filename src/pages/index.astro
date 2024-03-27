@@ -6,29 +6,33 @@ import Experiences from '@src/components/Experiences.astro';
 import Projects from '@src/components/Projects.astro';
 
 import '@fontsource-variable/overpass';
+
+import { socials } from "@src/lib/library.ts";
 ---
 
 <Layout title="Yao Hong">
   <div class="border-b p-2">
-    <div class="p-2 m-auto w-full lg:max-w-screen-lg md:max-w-screen-lg">
+    <div class="p-2 m-auto w-full xl:max-w-[1480px] md:max-w-screen-md">
       <NavBar/>
     </div>
   </div>
   <!-- <main class="px-6 pb-4 relative w-full m-auto md:max-w-lg xl:max-w-5xl" -->
-  <main class="m-auto relative w-full md:max-w-lg xl:max-w-5xl sm:max-w-sm">
-    <section class="flex items-center justify-center scroll-my-20">
-
-      <About/>
+    <main class="px-6 pb-4 m-auto relative w-full xl:max-w-3xl">
+    <section class="about-wrapper flex gap-12 items-center justify-around">
+      <About socials={socials}/>
     </section>
-
     <Experiences/>
-
     <Projects/>
   </main>
 </Layout>
 
 <style is:global>
+.about-wrapper {
+  height:100vh;
+}
 main {
+  margin: 0;
+  padding: 0rem;
   /* margin: auto; */
   /* padding: 1rem; */
   /* width: 800px; */
