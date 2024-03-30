@@ -1,40 +1,30 @@
 ---
 
+const {companyName, role, duration, responsibility, techUsed} = Astro.props;
 ---
 
-<div>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
-  <h1>Experiences here</h1>
+<div class="pt-4">
+  <div class="grid grid-cols-3 mt-2">
+    <div class="flex flex-col">
+      <div class="pb-1">
+        <text class="text-xl font-semibold">
+          {companyName}
+        </text>
+      </div>
+      <div class="pb-1">
+        <text class="text-lg">
+          {role === "SWE" && "Software Engineer"}
+          {role === "intern" && "Intern"}
+        </text>
+      </div>
+      <text>{duration}</text>
+    </div>
+    <div class="col-span-2 pb-4">
+      {responsibility.map((responsibility : any) => (
+        <li class="list-none pb-2 text-lg">
+          {responsibility}
+        </li>
+      ))}
+    </div>
+  </div>
 </div

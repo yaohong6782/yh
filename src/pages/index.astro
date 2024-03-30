@@ -1,28 +1,53 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import NavBar from '@src/components/NavBar.astro';
-import About from '@src/components/About.astro';
+import Introduction from '@src/components/Introduction.astro';
 import Experiences from '@src/components/Experiences.astro';
 import Projects from '@src/components/Projects.astro';
-
+import About from '@src/components/About.astro';
 import '@fontsource-variable/overpass';
 
-import { socials } from "@src/lib/library.ts";
+import { socials, experiences } from "@src/lib/library.ts";
+
 ---
 
 <Layout title="Yao Hong">
-  <div class="border-b p-2">
+  <div class="border-b pb-2 sticky top-0 z-50 bg-white">
     <div class="p-2 m-auto w-full xl:max-w-[1480px] md:max-w-screen-md">
       <NavBar/>
     </div>
   </div>
   <!-- <main class="px-6 pb-4 relative w-full m-auto md:max-w-lg xl:max-w-5xl" -->
-    <main class="px-6 pb-4 m-auto relative w-full xl:max-w-3xl">
+  <main class="px-6 pb-4 m-auto relative w-full xl:max-w-5xl">
     <section class="about-wrapper flex gap-12 items-center justify-around">
-      <About socials={socials}/>
+      <Introduction socials={socials}/>
     </section>
-    <Experiences/>
-    <Projects/>
+
+    <section class="pb-4 pt-4">
+      <div class="flex items-center gap-4">
+        <h1 class="text-3xl">About</h1>
+        <div class="w-screen border-b-black border-b-2"></div>
+      </div>
+      <About/>
+    </section>
+    <section id="experiences" class="pb-4 pt-4">
+      <div class="flex items-center gap-4">
+        <h1 class="text-3xl">Experiences</h1>
+        <div class="w-screen border-b-black border-b-2"></div>
+      </div>
+      {
+      experiences.map((experience) => (
+        <Experiences 
+          companyName={experience.companyName}
+          role={experience.role}
+          duration={experience.duration}
+          responsibility={experience.responsibility}
+          techUsed={experience.techUsed}
+        /> 
+      ))
+      }
+    </section>
+    <!-- <Projects/> -->
   </main>
 </Layout>
 
@@ -31,61 +56,7 @@ import { socials } from "@src/lib/library.ts";
   height:100vh;
 }
 main {
-  margin: 0;
-  padding: 0rem;
-  /* margin: auto; */
-  /* padding: 1rem; */
-  /* width: 800px; */
-  /* max-width: calc(100% - 2rem); */
-  /* color: black; */
-  /* font-size: 20px; */
-  /* line-height: 1.6; */
+  padding:0;
+  margin:0rem;
 }
-/* .astro-a { */
-/* 	position: absolute; */
-/* 	top: -32px; */
-/* 	left: 50%; */
-/* 	transform: translatex(-50%); */
-/* 	width: 220px; */
-/* 	height: auto; */
-/* 	z-index: -1; */
-/* } */
-/* h1 { */
-/* 	font-size: 4rem; */
-/* 	font-weight: 700; */
-/* 	line-height: 1; */
-/* 	text-align: center; */
-/* 	margin-bottom: 1em; */
-/* } */
-/* .text-gradient { */
-/* 	background-image: var(--accent-gradient); */
-/* 	-webkit-background-clip: text; */
-/* 	-webkit-text-fill-color: transparent; */
-/* 	background-size: 400%; */
-/* 	background-position: 0%; */
-/* } */
-/* .instructions { */
-/* 	margin-bottom: 2rem; */
-/* 	border: 1px solid rgba(var(--accent-light), 25%); */
-/* 	background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%)); */
-/* 	padding: 1.5rem; */
-/* 	border-radius: 8px; */
-/* } */
-/* .instructions code { */
-/* 	font-size: 0.8em; */
-/* 	font-weight: bold; */
-/* 	background: rgba(var(--accent-light), 12%); */
-/* 	color: rgb(var(--accent-light)); */
-/* 	border-radius: 4px; */
-/* 	padding: 0.3em 0.4em; */
-/* } */
-/* .instructions strong { */
-/* 	color: rgb(var(--accent-light)); */
-/* } */
-/* .link-card-grid { */
-/* 	display: grid; */
-/* 	grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr)); */
-/* 	gap: 2rem; */
-/* 	padding: 0; */
-/* } */
 </style>

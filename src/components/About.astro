@@ -1,29 +1,11 @@
 ---
-import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
-import yhPfp from '@src/images/yhPfp.png';
 
-const { socials } = Astro.props
 ---
 
-  <!-- <section class="wrapper flex items-center justify-around"> -->
-  <div class="">
-    <h1 class="text-5xl">
-      Hello! I'm 
-      <b>Yao Hong</b>
-    </h1>
-    <div class="flex flex-row gap-2 pt-3">
-      {socials.map((social : string ) => (
-        <Icon name={social} size={28} class="transform-gpu hover:scale-110 cursor-pointer"/>
-      ))}
-    </div>
-  </div>
-  <Image src={yhPfp} alt="profile picture" class="rounded-full w-32 h-32"/>
-<!-- </section> -->
-
-
-<style>
-</style>
-<!-- .about-wrapper { -->
-<!--   height:100vh; -->
-<!-- } -->
+<div class="pt-4">
+  <h2>
+    I write coding templates
+    <br/>
+    Been working on web development
+  </h2>
+</div>

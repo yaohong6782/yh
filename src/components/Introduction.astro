@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+
+import yhPfp from '@src/images/yhPfp.png';
+import type { Socials } from '@src/lib/library';
+
+const { socials } = Astro.props
+---
+
+  <!-- <section class=""> -->
+  <div class="">
+    <h1 class="text-5xl">
+      Hello! I'm 
+      <b>Yao Hong</b>
+    </h1>
+    <h2 class="font-patrick text-xl">lè software engineer</h2>
+    <div class="flex flex-row gap-2 pt-3">
+      {socials.map((social : Socials ) => (
+        <a href={social.url} target="_blank" rel="noopener">
+        <Icon name={social.icon} size={28} class="transform-gpu hover:scale-110 cursor-pointer"/>
+        </a>
+      ))}
+    </div>
+  </div>
+  <Image src={yhPfp} alt="profile picture" class="rounded-full w-32 h-32"/>
+<!-- </section> -->
+
+
+<style>
+</style>
+<!-- .about-wrapper { -->
+<!--   height:100vh; -->
+<!-- } -->
