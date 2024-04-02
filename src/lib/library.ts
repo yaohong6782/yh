@@ -64,6 +64,12 @@ export const technologies: Technologies[] = [
     roleUtilised: ["misc"],
   },
   {
+    name: "Swagger",
+    icon: "logos:swagger",
+    domain: "tools",
+    roleUtilised: ["work", "misc"],
+  },
+  {
     name: "PostgreSQL",
     icon: "logos:postgresql",
     domain: "tools",
@@ -146,5 +152,15 @@ export const experiences: Experiences[] = [
       "UAT documentation and test specifications",
     ],
     techUsed: internTech,
+  },
+];
+
+export const projects = [
+  {
+    projectName: "",
+    techUsed: "",
+    image: "",
+    demo: "",
+    github: "",
   },
 ];

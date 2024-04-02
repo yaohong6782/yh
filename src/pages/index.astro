@@ -24,14 +24,14 @@ import { socials, experiences, technologies, language, libraries, tools} from "@
       <Introduction socials={socials}/>
     </section>
 
-    <section class="pb-4 pt-4">
+    <section id="about" class="pb-4 pt-4 scroll-my-16">
       <div class="flex items-center gap-4">
         <h1 class="text-3xl">About</h1>
         <div class="w-screen border-b-black border-b-2"></div>
       </div>
       <About/>
     </section>
-    <section id="experiences" class="pb-4 pt-4">
+    <section id="experiences" class="pb-4 pt-4 scroll-my-16">
       <div class="flex items-center gap-4">
         <h1 class="text-3xl">Experiences</h1>
         <div class="w-screen border-b-black border-b-2"></div>
@@ -48,16 +48,24 @@ import { socials, experiences, technologies, language, libraries, tools} from "@
       ))
       }
     </section>
-    <section>
+    <section id="skills" class="pb-4 pt-4 scroll-my-16">
       <div class="flex items-center gap-4">
         <h1 class="text-3xl">Skills</h1>     
-        <div class="w-screen border-b-black border-b-2"></div>
+      <div class="w-screen border-b-black border-b-2"></div>
       </div>
-      <Skills title="Language" tech={language}/>
+      <Skills title="Languages" tech={language}/>
       <Skills title="Libraries" tech={libraries}/>
       <Skills title="Tools" tech={tools}/>
     </section>
-    <!-- <Projects/> -->
+
+    <section id="projects" class="pb-4 pt-4 scroll-my-16">
+      <skills title="tools" tech={tools}/>
+      <div class="flex items-center gap-4">
+        <h1 class="text-3xl">Projects</h1>     
+        <div class="w-screen border-b-black border-b-2"></div>
+      </div>
+      <Projects/>
+    </section>
   </main>
 </Layout>
 
