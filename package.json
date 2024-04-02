@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/figtree": "^5.0.20",
     "@fontsource-variable/overpass": "^5.0.18",
     "@fontsource/patrick-hand": "^5.0.19",
     "@fontsource/twinkle-star": "^5.0.19",
@@ -21,6 +22,7 @@
     "typescript": "^5.4.3"
   },
   "devDependencies": {
-    "@iconify-json/cib": "^1.1.8"
+    "@iconify-json/cib": "^1.1.8",
+    "@iconify-json/logos": "^1.1.42"
   }
 }

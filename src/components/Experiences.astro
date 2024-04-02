@@ -1,10 +1,10 @@
 ---
-
+import { Icon } from "astro-icon/components";
 const {companyName, role, duration, responsibility, techUsed} = Astro.props;
 ---
 
 <div class="pt-4">
-  <div class="grid grid-cols-3 mt-2">
+  <div class="grid grid-cols-3 mt-2 md:flex flex-col">
     <div class="flex flex-col">
       <div class="pb-1">
         <text class="text-xl font-semibold">
@@ -19,12 +19,26 @@ const {companyName, role, duration, responsibility, techUsed} = Astro.props;
       </div>
       <text>{duration}</text>
     </div>
-    <div class="col-span-2 pb-4">
-      {responsibility.map((responsibility : any) => (
-        <li class="list-none pb-2 text-lg">
-          {responsibility}
-        </li>
-      ))}
+    <div class="col-span-2 pb-4 md:pt-4">
+      <ul>
+        {responsibility.map((responsibility : string) => (
+          <li class="list-none pb-2 text-lg">
+            {responsibility}
+          </li>
+        ))}
+      </ul>
+      <br/>
+      <h2 class="text-md font-semibold bg-slate-200 pl-4 pr-4 pt-2 pb-2 rounded-full inline-block">Tools Utilised</h2>
+      <div class="pt-6 grid grid-cols-8 grid-rows-1 gap-6 md:grid-cols-3 md:grid-rows-3">
+        {techUsed?.map((tech: any) => (
+          <li class="list-none">
+            <div class="flex items-center justify-center">
+            <Icon name={tech.icon} size={28}/>
+            </div>
+            <text class="flex justify-center">{tech.name}</text>
+          </li>
+        ))}
+      </div>
     </div>
   </div>
 </div

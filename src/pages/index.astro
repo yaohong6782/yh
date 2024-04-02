@@ -5,9 +5,10 @@ import Introduction from '@src/components/Introduction.astro';
 import Experiences from '@src/components/Experiences.astro';
 import Projects from '@src/components/Projects.astro';
 import About from '@src/components/About.astro';
-import '@fontsource-variable/overpass';
+import Skills from '@src/components/Skills.astro';
+import "@fontsource-variable/figtree";
 
-import { socials, experiences } from "@src/lib/library.ts";
+import { socials, experiences, technologies, language, libraries, tools} from "@src/lib/library.ts";
 
 ---
 
@@ -46,6 +47,15 @@ import { socials, experiences } from "@src/lib/library.ts";
         /> 
       ))
       }
+    </section>
+    <section>
+      <div class="flex items-center gap-4">
+        <h1 class="text-3xl">Skills</h1>     
+        <div class="w-screen border-b-black border-b-2"></div>
+      </div>
+      <Skills title="Language" tech={language}/>
+      <Skills title="Libraries" tech={libraries}/>
+      <Skills title="Tools" tech={tools}/>
     </section>
     <!-- <Projects/> -->
   </main>
