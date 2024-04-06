@@ -13,8 +13,8 @@ const { projectName, techUsed, image, demo, github } = Astro.props;
     </h1>
     {image.length > 1 ? 
       <div class="relative border">
-        <Image width={950} src={image[0]} alt="sorted image" class="aboslute top-0 left-0 hover:opacity-0"/>
-        <Image width={950} src={image[1]} alt="unsorted image" class="absolute top-0 left-0 hover:opacity-0 duration-500"/>
+        <Image width={950} src={image[0]} alt="first image" class="aboslute top-0 left-0 hover:opacity-0"/>
+        <Image width={950} src={image[1]} alt="second image" class="absolute top-0 left-0 hover:opacity-0 duration-500"/>
       </div> :
       <div class="flex justify-center border">
         <Image height={250} width={650} src={image[0]} alt="sorted image" class="aboslute top-0 left-0"/>
