@@ -31,11 +31,11 @@ const {companyName, role, duration, responsibility, techUsed} = Astro.props;
       <h2 class="text-md font-semibold bg-slate-200 pl-4 pr-4 pt-2 pb-2 rounded-full inline-block">Tools Utilised</h2>
       <div class="pt-6 grid grid-cols-8 grid-rows-1 gap-6 md:grid-cols-3 md:grid-rows-3">
         {techUsed?.map((tech: any) => (
-          <li class="list-none">
+          <li class="group list-none">
             <div class="flex items-center justify-center">
             <Icon name={tech.icon} size={28}/>
             </div>
-            <text class="flex justify-center">{tech.name}</text>
+            <text class="flex justify-center opacity-0 group-hover:opacity-100 duration-300">{tech.name}</text>
           </li>
         ))}
       </div>

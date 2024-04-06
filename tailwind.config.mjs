@@ -1,6 +1,23 @@
 /** @type {import('tailwindcss').Config} */
-import { warn } from "node_modules/astro/dist/core/logger/core";
 import defaultTheme from "tailwindcss/defaultTheme";
+const plugin = require("tailwindcss/plugin");
+const Myclass = plugin(function ({ addUtilities }) {
+  addUtilities({
+    ".my-rotate-y-180": {
+      transform: "rotateY(180deg)",
+    },
+    ".preserve-3d": {
+      transformStyle: "preserve-3d",
+    },
+    ".perspective": {
+      perspective: "1000px",
+    },
+    ".backface-hidden": {
+      backfaceVisibility: "hidden",
+    },
+  });
+});
+
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
@@ -15,5 +32,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [Myclass],
 };

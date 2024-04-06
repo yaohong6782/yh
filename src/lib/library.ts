@@ -1,3 +1,12 @@
+import SortedImage from "@src/images/sorted.png";
+import UnsortedImage from "@src/images/unsorted.png";
+import PersonalWebImage from "@src/images/personalWeb.png";
+
+export interface Socials {
+  url: string;
+  icon: string;
+}
+
 export interface Socials {
   url: string;
   icon: string;
@@ -19,6 +28,7 @@ export interface Technologies {
   domain: "library" | "language" | "tools";
   // description?: "work" | "intern" | "misc";
   roleUtilised: string[];
+  projectTech?: string[];
 }
 export const technologies: Technologies[] = [
   {
@@ -26,18 +36,21 @@ export const technologies: Technologies[] = [
     icon: "logos:javascript",
     domain: "language",
     roleUtilised: ["intern", "misc"],
+    projectTech: ["sortingVisualiser"],
   },
   {
     name: "TypeScript",
     icon: "logos:typescript-icon",
     domain: "language",
     roleUtilised: ["work", "misc"],
+    projectTech: ["codingNotes"],
   },
   {
     name: "Java",
     icon: "logos:java",
     domain: "language",
     roleUtilised: ["work", "misc"],
+    projectTech: ["backendCodeStub"],
   },
   {
     name: "Python",
@@ -50,6 +63,7 @@ export const technologies: Technologies[] = [
     icon: "logos:react",
     domain: "library",
     roleUtilised: ["work", "intern", "misc"],
+    projectTech: ["sortingVisualiser", "codingNotes"],
   },
   {
     name: "Node",
@@ -62,18 +76,21 @@ export const technologies: Technologies[] = [
     icon: "logos:astro-icon",
     domain: "library",
     roleUtilised: ["misc"],
+    projectTech: ["personalWeb"],
   },
   {
     name: "Swagger",
     icon: "logos:swagger",
     domain: "tools",
     roleUtilised: ["work", "misc"],
+    projectTech: ["backendCodeStub"],
   },
   {
     name: "PostgreSQL",
     icon: "logos:postgresql",
     domain: "tools",
     roleUtilised: ["misc"],
+    projectTech: ["codingNotes", "backendCodeStub"],
   },
   {
     name: "Git",
@@ -86,24 +103,28 @@ export const technologies: Technologies[] = [
     icon: "logos:tailwindcss-icon",
     domain: "library",
     roleUtilised: ["misc"],
+    projectTech: ["sortingVisualiserTech", "codingNotes"],
   },
   {
     name: "Spring",
     icon: "logos:spring-icon",
     domain: "library",
     roleUtilised: ["work", "misc"],
+    projectTech: ["backendCodeStub"],
   },
   {
     name: "Docker",
     icon: "logos:docker-icon",
     domain: "tools",
     roleUtilised: ["misc"],
+    projectTech: ["codingNotes"],
   },
   {
     name: "NestJS",
     icon: "logos:nestjs",
     roleUtilised: ["misc"],
     domain: "library",
+    projectTech: ["codingNotes"],
   },
 ];
 
@@ -136,9 +157,8 @@ export const experiences: Experiences[] = [
     role: "SWE",
     duration: "Jun 2022 - Present",
     responsibility: [
-      "Development of client's application to a maintainable framework and technology adhering to business requirements",
-      "Built Front-End components fostering modularity for project's long term maintainability",
-      "Optimised Back-End APIs improving search and load times",
+      "Tech Refresh development of client's application to a maintainable framework and technology adhering to business requirements",
+      "Built Back-End APIs and Front-End components fostering modularity for project's long term maintainability",
       "Maintained of deployed application upon successful go-live, addressing and incorporating enhancement to ongoing business needs and relevance",
     ],
     techUsed: workTech,
@@ -155,12 +175,41 @@ export const experiences: Experiences[] = [
   },
 ];
 
+const sortingVisualiserTech = technologies.filter((tech) =>
+  tech.projectTech?.includes("sortingVisualiser"),
+);
+
+const backendCodeStubTech = technologies.filter((tech) =>
+  tech.projectTech?.includes("backendCodeStub"),
+);
+
+const codingNotesTech = technologies.filter((tech) =>
+  tech.projectTech?.includes("codingNotes"),
+);
+
+const personalWebTech = technologies.filter((tech) =>
+  tech.projectTech?.includes("personalWeb"),
+);
 export const projects = [
   {
-    projectName: "",
-    techUsed: "",
-    image: "",
+    projectName: "Personal Website",
+    techUsed: personalWebTech,
+    image: [PersonalWebImage],
     demo: "",
     github: "",
   },
+  {
+    projectName: "Sorting Visualiser",
+    techUsed: sortingVisualiserTech,
+    image: [SortedImage, UnsortedImage],
+    demo: "https://sorting-visualiser-738ffc.netlify.app/",
+    github: "https://github.com/yaohong6782/sorting-visualiser",
+  },
+  // {
+  //   projectName: "Coding Notes",
+  //   techUsed: codingNotesTech,
+  //   image: "",
+  //   demo: "",
+  //   github: "",
+  // },
 ];

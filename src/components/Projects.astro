@@ -1,12 +1,49 @@
 ---
+import { Icon } from "astro-icon/components"
+import { Image } from "astro:assets";
 
+const { projectName, techUsed, image, demo, github } = Astro.props;
 ---
 
 
 <div class="pt-4"> 
   <div>
-    <h1> 
-      Projects here
+    <h1 class="pt-2 text-xl font-semibold">
+      {projectName}
     </h1>
+    {image.length > 1 ? 
+      <div class="relative border">
+        <Image width={950} src={image[0]} alt="sorted image" class="aboslute top-0 left-0 hover:opacity-0"/>
+        <Image width={950} src={image[1]} alt="unsorted image" class="absolute top-0 left-0 hover:opacity-0 duration-500"/>
+      </div> :
+      <div class="flex justify-center border">
+        <Image height={250} width={650} src={image[0]} alt="sorted image" class="aboslute top-0 left-0"/>
+      </div>
+    } 
+    <div class="flex gap-4 pt-2">
+      {techUsed.map((tech: any) => (
+        <li class="group list-none">
+          <div class="flex items-center justify-center group-hover:-translate-y-2 duration-300">
+            <Icon name={tech.icon} size={28}/>
+          </div>
+          <text class="opacity-50 text-md font-semibold group-hover:opacity-100 duration-300">{tech.name}</text>
+        </li>
+      ))}
+      <div class="flex items-end gap-4">
+        <a href={demo} target="_blank" rel="noopener" class="group">
+          <div class="flex justify-center group-hover:-translate-y-2 duration-500">
+            <Icon name="carbon:demo" size={28}/>
+          </div>
+          <text class="opacity-50 text-md font-semibold group-hover:opacity-100 duration-300">Link</text>
+        </a>
+
+        <a href={github} target="_blank" rel="noopener" class="group">
+          <div class="flex justify-center group-hover:-translate-y-2 duration-500">
+            <Icon name="cib:github" size={28}/>
+          </div>
+          <text class="opacity-50 text-md font-semibold group-hover:opacity-100 duration-300">Github</text>
+        </a>
+      </div>
+    </div>
   </div>
 </div>

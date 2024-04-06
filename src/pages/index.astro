@@ -6,9 +6,10 @@ import Experiences from '@src/components/Experiences.astro';
 import Projects from '@src/components/Projects.astro';
 import About from '@src/components/About.astro';
 import Skills from '@src/components/Skills.astro';
+
 import "@fontsource-variable/figtree";
 
-import { socials, experiences, technologies, language, libraries, tools} from "@src/lib/library.ts";
+import { socials, experiences, projects, language, libraries, tools} from "@src/lib/library.ts";
 
 ---
 
@@ -18,7 +19,6 @@ import { socials, experiences, technologies, language, libraries, tools} from "@
       <NavBar/>
     </div>
   </div>
-  <!-- <main class="px-6 pb-4 relative w-full m-auto md:max-w-lg xl:max-w-5xl" -->
   <main class="px-6 pb-4 m-auto relative w-full xl:max-w-5xl">
     <section class="about-wrapper flex gap-12 items-center justify-around">
       <Introduction socials={socials}/>
@@ -64,7 +64,24 @@ import { socials, experiences, technologies, language, libraries, tools} from "@
         <h1 class="text-3xl">Projects</h1>     
         <div class="w-screen border-b-black border-b-2"></div>
       </div>
-      <Projects/>
+      {
+      projects.map((project: any) => (
+        <Projects
+          projectName={project.projectName}
+          techUsed={project.techUsed}
+          image={project.image}
+          demo={project.demo}
+          github={project.github}
+        />
+      ))
+      }
+      <!-- <Projects  -->
+      <!--   projectName={"Personal Website"} -->
+      <!--   techUsed="" -->
+      <!--   image="" -->
+      <!--   demo="" -->
+      <!--   github="" -->
+      <!-- /> -->
     </section>
   </main>
 </Layout>
