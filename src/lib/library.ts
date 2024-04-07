@@ -1,6 +1,7 @@
 import SortedImage from "@src/images/sorted.png";
 import UnsortedImage from "@src/images/unsorted.png";
 import PersonalWebImage from "@src/images/personalWeb.png";
+import PersonalWebImage2 from "@src/images/personalWeb2.png";
 
 export interface Socials {
   url: string;
@@ -26,7 +27,6 @@ export interface Technologies {
   name: string;
   icon: string;
   domain: "library" | "language" | "tools";
-  // description?: "work" | "intern" | "misc";
   roleUtilised: string[];
   projectTech?: string[];
 }
@@ -194,9 +194,9 @@ export const projects = [
   {
     projectName: "Personal Website",
     techUsed: personalWebTech,
-    image: [PersonalWebImage],
+    image: [PersonalWebImage2],
     demo: "",
-    github: "",
+    github: "https://github.com/yaohong6782/yh",
   },
   {
     projectName: "Sorting Visualiser",

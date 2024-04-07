@@ -1,4 +1,5 @@
 ---
+import type { Technologies } from "@src/lib/library";
 import { Icon } from "astro-icon/components"
 import { Image } from "astro:assets";
 
@@ -13,7 +14,7 @@ const { projectName, techUsed, image, demo, github } = Astro.props;
     </h1>
     {image.length > 1 ? 
       <div class="relative border">
-        <Image width={950} src={image[0]} alt="first image" class="aboslute top-0 left-0 hover:opacity-0"/>
+        <Image width={950} src={image[0]} alt="first image" class="aboslute top-0 left-0"/>
         <Image width={950} src={image[1]} alt="second image" class="absolute top-0 left-0 hover:opacity-0 duration-500"/>
       </div> :
       <div class="flex justify-center border">
@@ -21,7 +22,7 @@ const { projectName, techUsed, image, demo, github } = Astro.props;
       </div>
     } 
     <div class="flex gap-4 pt-2">
-      {techUsed.map((tech: any) => (
+      {techUsed.map((tech: Technologies) => (
         <li class="group list-none">
           <div class="flex items-center justify-center group-hover:-translate-y-2 duration-300">
             <Icon name={tech.icon} size={28}/>
