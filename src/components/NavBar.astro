@@ -1,5 +1,6 @@
 ---
 import '@fontsource/patrick-hand'
+import ThemeIcon from '@src/components/ThemeIcon.astro';
 
 const sectionItems = [
   {
@@ -24,18 +25,23 @@ const sectionItems = [
 
 
 <nav class="flex justify-between md:flex-row pl-2 pr-2">
-<ul class="flex items-left items-center ">
-  <li class=" text-3xl hover:underline underline-offset-4 cursor-pointer font-patrick hover:scale-110">yao hong</li>
-</ul>
-<ul class="text-2xl gap-6 pt-3 flex right-item items-center md:flex-col font-patrick">
-  {sectionItems.map((section) => (
-    <li class="hover:underline underline-offset-4 cursor-pointer hover:scale-110">
-      <a href={section.anchor}> 
-        {section.name}
+  <ul class="flex items-left items-center ">
+    <li class=" text-3xl hover:underline underline-offset-4 cursor-pointer font-patrick hover:scale-110">
+      <a href={"#introduction"}>
+        yao hong
       </a>
     </li>
-  ))}
-</ul>
+  </ul>
+  <ul class="text-2xl gap-6 pt-3 flex right-item items-center md:flex-col font-patrick">
+    {sectionItems.map((section) => (
+      <li class="hover:underline underline-offset-4 cursor-pointer hover:scale-110" >
+        <a href={section.anchor}> 
+          {section.name}
+        </a>
+      </li>
+    ))}
+    <ThemeIcon/>
+  </ul>
 </nav>
 <style>
 </style>

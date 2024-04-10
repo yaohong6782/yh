@@ -2,6 +2,8 @@ import SortedImage from "@src/images/sorted.png";
 import UnsortedImage from "@src/images/unsorted.png";
 import PersonalWebImage from "@src/images/personalWeb.png";
 import PersonalWebImage2 from "@src/images/personalWeb2.png";
+import PersonalWebImage3 from "@src/images/personalWeb3.png";
+import DarkModePersonalWebImage from "@src/images/darkModePersonalWeb.png";
 
 export interface Socials {
   url: string;

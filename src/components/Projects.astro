@@ -12,15 +12,17 @@ const { projectName, techUsed, image, demo, github } = Astro.props;
     <h1 class="pt-2 text-xl font-semibold">
       {projectName}
     </h1>
-    {image.length > 1 ? 
-      <div class="relative border">
-        <Image width={950} src={image[0]} alt="first image" class="aboslute top-0 left-0"/>
-        <Image width={950} src={image[1]} alt="second image" class="absolute top-0 left-0 hover:opacity-0 duration-500"/>
-      </div> :
-      <div class="flex justify-center border">
-        <Image height={250} width={650} src={image[0]} alt="sorted image" class="aboslute top-0 left-0"/>
+    {projectName === "Sorting Visualiser" && 
+      <div class="relative border flex justify-center">
+        <Image width={950} src={image[0]} alt="first image" class="aboslute top-0 w-full"/>
+        <Image width={950} src={image[1]} alt="second image" class="absolute top-0 w-full hover:opacity-0 duration-500"/>
       </div>
-    } 
+    }
+    {projectName !== "Sorting Visualiser" && 
+      <div class="relative flex justify-center border">
+        <Image width={950} src={image[0]} alt="sorted image" class="aboslute top-0 w-full"/>
+      </div>
+    }
     <div class="flex gap-4 pt-2">
       {techUsed.map((tech: Technologies) => (
         <li class="group list-none">

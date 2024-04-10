@@ -14,27 +14,27 @@ import { socials, experiences, projects, language, libraries, tools} from "@src/
 ---
 
 <Layout title="Yao Hong">
-  <div class="border-b pb-2 lg:sticky top-0 z-50 bg-white">
+  <div class="border-b pb-2 lg:sticky top-0 z-50 bg-white dark:bg-slate-900">
     <div class="p-2 m-auto w-full xl:max-w-[1480px] md:max-w-screen-md">
       <NavBar/>
     </div>
   </div>
   <main class="px-6 pb-4 m-auto relative w-full xl:max-w-5xl">
-    <section class="about-wrapper flex gap-12 items-center justify-around">
+    <section id="introduction" class="about-wrapper flex gap-12 items-center justify-around">
       <Introduction socials={socials}/>
     </section>
 
     <section id="about" class="pb-4 pt-4 scroll-my-16">
       <div class="flex items-center gap-4">
         <h1 class="text-3xl">About</h1>
-        <div class="w-screen border-b-black border-b-2"></div>
+        <div class="w-screen border-b-black border-b-2 dark:border-b-white"></div>
       </div>
       <About/>
     </section>
     <section id="experiences" class="pb-4 pt-4 scroll-my-16">
       <div class="flex items-center gap-4">
         <h1 class="text-3xl">Experiences</h1>
-        <div class="w-screen border-b-black border-b-2"></div>
+        <div class="w-screen border-b-black border-b-2 dark:border-b-white"></div>
       </div>
       {
       experiences.map((experience) => (
@@ -51,7 +51,7 @@ import { socials, experiences, projects, language, libraries, tools} from "@src/
     <section id="skills" class="pb-4 pt-4 scroll-my-16">
       <div class="flex items-center gap-4">
         <h1 class="text-3xl">Skills</h1>     
-      <div class="w-screen border-b-black border-b-2"></div>
+      <div class="w-screen border-b-black border-b-2 dark:border-b-white"></div>
       </div>
       <Skills title="Languages" tech={language}/>
       <Skills title="Libraries" tech={libraries}/>
@@ -62,7 +62,7 @@ import { socials, experiences, projects, language, libraries, tools} from "@src/
       <skills title="tools" tech={tools}/>
       <div class="flex items-center gap-4">
         <h1 class="text-3xl">Projects</h1>     
-        <div class="w-screen border-b-black border-b-2"></div>
+        <div class="w-screen border-b-black border-b-2 "></div>
       </div>
       {
       projects.map((project: any) => (
@@ -75,13 +75,6 @@ import { socials, experiences, projects, language, libraries, tools} from "@src/
         />
       ))
       }
-      <!-- <Projects  -->
-      <!--   projectName={"Personal Website"} -->
-      <!--   techUsed="" -->
-      <!--   image="" -->
-      <!--   demo="" -->
-      <!--   github="" -->
-      <!-- /> -->
     </section>
   </main>
 </Layout>
