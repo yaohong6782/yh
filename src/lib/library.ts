@@ -3,17 +3,12 @@ import UnsortedImage from "@src/images/unsorted.png";
 import PersonalWebImage from "@src/images/personalWeb.png";
 import PersonalWebImage2 from "@src/images/personalWeb2.png";
 import PersonalWebImage3 from "@src/images/personalWeb3.png";
-import DarkModePersonalWebImage from "@src/images/darkModePersonalWeb.png";
 
 export interface Socials {
   url: string;
   icon: string;
 }
 
-export interface Socials {
-  url: string;
-  icon: string;
-}
 export const socials: Socials[] = [
   {
     url: "https://github.com/yaohong6782",
