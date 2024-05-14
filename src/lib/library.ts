@@ -152,7 +152,7 @@ export const experiences: Experiences[] = [
   {
     companyName: "NCS Group",
     role: "SWE",
-    duration: "Jun 2022 - Present",
+    duration: "Nov 2022 - Present",
     responsibility: [
       "Tech Refresh development of client's application to a maintainable framework and technology adhering to business requirements",
       "Built Back-End APIs and Front-End components fostering modularity for project's long term maintainability",
