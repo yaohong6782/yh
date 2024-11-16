@@ -196,7 +196,8 @@ export const experiences: Experiences[] = [
     responsibility: [
       "Engeering team for managing and aligning staging server configurations for Hong Kong team's pre-production environment requirements",
       "Cut-over migration project for Cards and Payment Microservice API team",
-      "Implement internal logging systems of API calls, tracking for performance and issue monitoring",
+      "Designed and implemented an internal logging system for API calls, enabling detailed performance tracking and real-time issue monitoring",
+      "Leveraged Kafka for real-time data streaming pipeline to process high-volume events",
     ],
     techUsed: dbsTech,
   },
