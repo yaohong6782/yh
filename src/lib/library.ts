@@ -2,8 +2,12 @@ import SortedImage from "@src/images/sorted.png";
 import UnsortedImage from "@src/images/unsorted.png";
 import PersonalWebImage from "@src/images/personalWeb.png";
 import PersonalWebImage2 from "@src/images/personalWeb2.png";
-import PersonalWebImage3 from "@src/images/personalWeb3.png";
-
+import DarkPersonalWebImage from "@src/images/dark-mode-personal.png";
+// import LightPersonalWebImage from "@src/images/light-mode-personal.png";
+import FinanceAppDashboard from "@src/images/finance-app-dashboard.png";
+import FinanceeAppTransactionPage from "@src/images/finance-app-transaction-page.png";
+import BulletDestiny from "@src/images/bullet-destiny.png";
+import YoutubeSummariser from "@src/images/youtube-summariser.png";
 export interface Socials {
   url: string;
   icon: string;
@@ -14,10 +18,10 @@ export const socials: Socials[] = [
     url: "https://github.com/yaohong6782",
     icon: "cib:github",
   },
-  {
-    url: "https://www.linkedin.com/in/yao-hong/",
-    icon: "cib:linkedin",
-  },
+  //   {
+  //     url: "https://www.linkedin.com/in/yao-hong/",
+  //     icon: "cib:linkedin",
+  //   },
 ];
 
 export interface Technologies {
@@ -26,6 +30,7 @@ export interface Technologies {
   domain: "library" | "language" | "tools";
   roleUtilised: string[];
   projectTech?: string[];
+  invertOnDark?: boolean | null;
 }
 export const technologies: Technologies[] = [
   {
@@ -39,19 +44,33 @@ export const technologies: Technologies[] = [
     name: "TypeScript",
     icon: "logos:typescript-icon",
     domain: "language",
-    roleUtilised: ["work", "misc"],
-    projectTech: ["codingNotes"],
+    roleUtilised: ["ncs", "misc"],
+    projectTech: ["codingNotes", "myExpense"],
   },
   {
     name: "Java",
     icon: "logos:java",
     domain: "language",
-    roleUtilised: ["work", "misc"],
-    projectTech: ["backendCodeStub"],
+    roleUtilised: ["ncs", "dbs", "misc"],
+    projectTech: ["backendCodeStub", "myExpense", "bulletDestiny"],
   },
+  //   {
+  //     name: "Jenkins",
+  //     icon: "logos:jenkins",
+  //     domain: "tools",
+  //     roleUtilised: ["dbs"],
+  //     projectTech: [],
+  //   },
   {
     name: "Python",
     icon: "logos:python",
+    domain: "language",
+    roleUtilised: ["misc"],
+  },
+
+  {
+    name: "Go",
+    icon: "devicon:go",
     domain: "language",
     roleUtilised: ["misc"],
   },
@@ -59,14 +78,19 @@ export const technologies: Technologies[] = [
     name: "React",
     icon: "logos:react",
     domain: "library",
-    roleUtilised: ["work", "intern", "misc"],
-    projectTech: ["sortingVisualiser", "codingNotes"],
+    roleUtilised: ["intern", "misc", "ncs"],
+    projectTech: [
+      "sortingVisualiser",
+      "codingNotes",
+      "myExpense",
+      "youtubeSummariser",
+    ],
   },
   {
     name: "Node",
     icon: "logos:nodejs-icon",
     domain: "library",
-    roleUtilised: ["work", "misc"],
+    roleUtilised: ["ncs", "misc"],
   },
   {
     name: "Astro",
@@ -76,10 +100,17 @@ export const technologies: Technologies[] = [
     projectTech: ["personalWeb"],
   },
   {
-    name: "Swagger",
-    icon: "logos:swagger",
+    name: "AWS",
+    icon: "logos:aws",
     domain: "tools",
-    roleUtilised: ["work", "misc"],
+    roleUtilised: ["work", "ncs", "misc"],
+    projectTech: ["backendCodeStub"],
+  },
+  {
+    name: "Oracle",
+    icon: "logos:oracle",
+    domain: "tools",
+    roleUtilised: ["work", "dbs", "misc"],
     projectTech: ["backendCodeStub"],
   },
   {
@@ -87,13 +118,13 @@ export const technologies: Technologies[] = [
     icon: "logos:postgresql",
     domain: "tools",
     roleUtilised: ["misc"],
-    projectTech: ["codingNotes", "backendCodeStub"],
+    projectTech: ["codingNotes", "backendCodeStub", "myExpense"],
   },
   {
     name: "Git",
     icon: "logos:git-icon",
     domain: "tools",
-    roleUtilised: ["work", "intern", "misc"],
+    roleUtilised: ["work", "dbs", "ncs", "intern", "misc"],
   },
   {
     name: "Tailwind",
@@ -106,15 +137,15 @@ export const technologies: Technologies[] = [
     name: "Spring",
     icon: "logos:spring-icon",
     domain: "library",
-    roleUtilised: ["work", "misc"],
-    projectTech: ["backendCodeStub"],
+    roleUtilised: ["ncs", "dbs", "misc"],
+    projectTech: ["backendCodeStub", "myExpense"],
   },
   {
     name: "Docker",
     icon: "logos:docker-icon",
     domain: "tools",
-    roleUtilised: ["misc"],
-    projectTech: ["codingNotes"],
+    roleUtilised: ["misc", "ncs"],
+    projectTech: ["codingNotes", "myExpense"],
   },
   {
     name: "NestJS",
@@ -122,6 +153,22 @@ export const technologies: Technologies[] = [
     roleUtilised: ["misc"],
     domain: "library",
     projectTech: ["codingNotes"],
+  },
+  {
+    name: "Fastify",
+    icon: "logos:fastify-icon",
+    roleUtilised: ["misc"],
+    domain: "library",
+    projectTech: ["codingNotes"],
+    invertOnDark: true,
+  },
+  {
+    name: "FastAPI",
+    icon: "logos:fastapi-icon",
+    roleUtilised: ["misc"],
+    domain: "library",
+    projectTech: ["youtubeSummariser"],
+    invertOnDark: false,
   },
 ];
 
@@ -133,8 +180,12 @@ export const libraries = technologies.filter(
 );
 export const tools = technologies.filter((tech) => tech.domain === "tools");
 
-const workTech = technologies.filter((tech) =>
-  tech.roleUtilised.includes("work"),
+const ncsTech = technologies.filter((tech) =>
+  tech.roleUtilised.includes("ncs"),
+);
+
+const dbsTech = technologies.filter((tech) =>
+  tech.roleUtilised.includes("dbs"),
 );
 
 const internTech = technologies.filter((tech) =>
@@ -150,25 +201,31 @@ export interface Experiences {
 
 export const experiences: Experiences[] = [
   {
-    companyName: "NCS Group",
+    companyName: "DBS Bank",
     role: "SWE",
-    duration: "Nov 2022 - Present",
+    duration: "Jul 2024 - Present",
     responsibility: [
-      "Tech Refresh development of client's application to a maintainable framework and technology adhering to business requirements",
-      "Built Back-End APIs and Front-End components fostering modularity for project's long term maintainability",
-      "Maintained of deployed application upon successful go-live, addressing and incorporating enhancement to ongoing business needs and relevance",
+      "Built and deployed Spring Boot APIs supporting large-scale Cards and Payments migrations for core card services.",
+      "Implement middleware services to serve internal core banking systems, retail consumers alongside external payment providers (VisionPLUS and PowerCard) .",
+      "Migration of mainframe and vendor-dependent systems to a cloud-native platform, increasing in-house ownership and reducing vendor reliance, operational overhead, and long-term costs",
+      "Performed production issue analysis using application logs, collaborating with engineering and operations teams to resolve integration and API-related incidents.",
+      "Led deployment change management by coordinating technical inputs and cross-stakeholder approvals, ensuring compliant and failure-free production releases.",
     ],
-    techUsed: workTech,
+    techUsed: dbsTech,
   },
   {
-    companyName: "Onwards Media Group Pte Ltd",
-    role: "intern",
-    duration: "Nov 2017 - Feb 2018",
+    companyName: "NCS Group",
+    role: "SWE",
+    duration: "Nov 2022 - Jun 2024",
     responsibility: [
-      "Conceptualised by implementing and integrating Trueface recognition API",
-      "UAT documentation and test specifications",
+      "Modernized client applications through tech refresh initiatives, migrating legacy solutions to maintainable frameworks aligned with business needs improving SLA resolution.",
+      "Contributed to cloud-native adoption under the Whole-of-Government (WoG) GCC standards.",
+      "Delivered end-to-end full-stack solutions using React, Spring Boot, and AWS, improving system reliability and operational workflows.",
+      "Built and introduced reusable and configurable React components, consolidating 20 static pages into a single dynamic module, with schema-based form validation (Yup) to enforce consistent data integrity and reduce frontend defects.",
+      "Supported post-go-live operations by maintaining deployed systems and implementing enhancements to meet evolving requirements.",
+      "Proposed enhancement with regards to evolving business needs which supports recurring service engagement and revenue to the company",
     ],
-    techUsed: internTech,
+    techUsed: ncsTech,
   },
 ];
 
@@ -187,11 +244,38 @@ const codingNotesTech = technologies.filter((tech) =>
 const personalWebTech = technologies.filter((tech) =>
   tech.projectTech?.includes("personalWeb"),
 );
+
+const myExpenseTech = technologies.filter((tech) =>
+  tech.projectTech?.includes("myExpense"),
+);
+
+const bulletDestinyTech = technologies.filter((tech) =>
+  tech.projectTech?.includes("bulletDestiny"),
+);
+
+const youtubeSummaryTech = technologies.filter((tech) =>
+  tech.projectTech?.includes("youtubeSummariser"),
+);
+
 export const projects = [
+  {
+    projectName: "MyExpense - Expense Application",
+    techUsed: myExpenseTech,
+    image: [FinanceAppDashboard, FinanceeAppTransactionPage],
+    demo: "https://my-expense-lpmt.onrender.com/",
+    github: "https://github.com/yaohong6782/finance",
+  },
+  {
+    projectName: "Bullet Destiny",
+    techUsed: bulletDestinyTech,
+    image: [BulletDestiny],
+    demo: "",
+    github: "https://github.com/yaohong6782/mydestiny",
+  },
   {
     projectName: "Personal Website",
     techUsed: personalWebTech,
-    image: [PersonalWebImage2],
+    image: [PersonalWebImage],
     demo: "",
     github: "https://github.com/yaohong6782/yh",
   },
@@ -202,11 +286,11 @@ export const projects = [
     demo: "https://sorting-visualiser-738ffc.netlify.app/",
     github: "https://github.com/yaohong6782/sorting-visualiser",
   },
-  // {
-  //   projectName: "Coding Notes",
-  //   techUsed: codingNotesTech,
-  //   image: "",
-  //   demo: "",
-  //   github: "",
-  // },
+  {
+    projectName: "Youtube Summariser",
+    techUsed: youtubeSummaryTech,
+    image: [YoutubeSummariser],
+    demo: "",
+    github: "",
+  },
 ];
