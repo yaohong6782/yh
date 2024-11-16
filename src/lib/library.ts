@@ -39,19 +39,34 @@ export const technologies: Technologies[] = [
     name: "TypeScript",
     icon: "logos:typescript-icon",
     domain: "language",
-    roleUtilised: ["work", "misc"],
+    roleUtilised: ["ncs", "misc"],
     projectTech: ["codingNotes"],
   },
   {
     name: "Java",
     icon: "logos:java",
     domain: "language",
-    roleUtilised: ["work", "misc"],
+    roleUtilised: ["ncs", "dbs", "misc"],
     projectTech: ["backendCodeStub"],
   },
   {
+    name: "Jenkins",
+    icon: "logos:jenkins",
+    domain: "language",
+    roleUtilised: ["dbs"],
+    projectTech: [],
+  },
+  // {},
+  {
     name: "Python",
     icon: "logos:python",
+    domain: "language",
+    roleUtilised: ["misc"],
+  },
+
+  {
+    name: "Go",
+    icon: "devicon:go",
     domain: "language",
     roleUtilised: ["misc"],
   },
@@ -59,14 +74,14 @@ export const technologies: Technologies[] = [
     name: "React",
     icon: "logos:react",
     domain: "library",
-    roleUtilised: ["work", "intern", "misc"],
+    roleUtilised: ["intern", "misc"],
     projectTech: ["sortingVisualiser", "codingNotes"],
   },
   {
     name: "Node",
     icon: "logos:nodejs-icon",
     domain: "library",
-    roleUtilised: ["work", "misc"],
+    roleUtilised: ["ncs", "misc"],
   },
   {
     name: "Astro",
@@ -79,7 +94,7 @@ export const technologies: Technologies[] = [
     name: "Swagger",
     icon: "logos:swagger",
     domain: "tools",
-    roleUtilised: ["work", "misc"],
+    roleUtilised: ["work", "ncs", "dbs", "misc"],
     projectTech: ["backendCodeStub"],
   },
   {
@@ -93,7 +108,7 @@ export const technologies: Technologies[] = [
     name: "Git",
     icon: "logos:git-icon",
     domain: "tools",
-    roleUtilised: ["work", "intern", "misc"],
+    roleUtilised: ["work", "dbs", "ncs", "intern", "misc"],
   },
   {
     name: "Tailwind",
@@ -106,14 +121,14 @@ export const technologies: Technologies[] = [
     name: "Spring",
     icon: "logos:spring-icon",
     domain: "library",
-    roleUtilised: ["work", "misc"],
+    roleUtilised: ["ncs", "dbs", "misc"],
     projectTech: ["backendCodeStub"],
   },
   {
     name: "Docker",
     icon: "logos:docker-icon",
     domain: "tools",
-    roleUtilised: ["misc"],
+    roleUtilised: ["misc", "ncs"],
     projectTech: ["codingNotes"],
   },
   {
@@ -123,22 +138,47 @@ export const technologies: Technologies[] = [
     domain: "library",
     projectTech: ["codingNotes"],
   },
+  {
+    name: "Confluence",
+    icon: "logos:confluence",
+    roleUtilised: ["dbs"],
+    domain: "tools",
+    projectTech: [],
+  },
+  {
+    name: "Jira",
+    icon: "logos:jira",
+    roleUtilised: ["dbs"],
+    domain: "tools",
+    projectTech: [],
+  },
+  // {
+  //   name: "Kafka",
+  //   icon: "logos:kafka",
+  //   roleUtilised: ["dbs"],
+  //   domain: "library",
+  //   projectTech: [],
+  // },
 ];
 
 export const language = technologies.filter(
-  (tech) => tech.domain === "language",
+  (tech) => tech.domain === "language"
 );
 export const libraries = technologies.filter(
-  (tech) => tech.domain === "library",
+  (tech) => tech.domain === "library"
 );
 export const tools = technologies.filter((tech) => tech.domain === "tools");
 
-const workTech = technologies.filter((tech) =>
-  tech.roleUtilised.includes("work"),
+const ncsTech = technologies.filter((tech) =>
+  tech.roleUtilised.includes("ncs")
+);
+
+const dbsTech = technologies.filter((tech) =>
+  tech.roleUtilised.includes("dbs")
 );
 
 const internTech = technologies.filter((tech) =>
-  tech.roleUtilised.includes("intern"),
+  tech.roleUtilised.includes("intern")
 );
 export interface Experiences {
   companyName: string;
@@ -150,15 +190,28 @@ export interface Experiences {
 
 export const experiences: Experiences[] = [
   {
+    companyName: "DBS Bank",
+    role: "SWE",
+    duration: "Jul 2024 - Present",
+    responsibility: [
+      "Engeering team for managing and aligning staging server configurations for Hong Kong team's pre-production environment requirements",
+      "Cut-over migration project for Cards and Payment Microservice API team",
+      "Implement internal logging systems of API calls, tracking for performance and issue monitoring",
+    ],
+    techUsed: dbsTech,
+  },
+  {
     companyName: "NCS Group",
     role: "SWE",
-    duration: "Nov 2022 - Present",
+    duration: "Nov 2022 - Jun 2024",
     responsibility: [
       "Tech Refresh development of client's application to a maintainable framework and technology adhering to business requirements",
-      "Built Back-End APIs and Front-End components fostering modularity for project's long term maintainability",
+      "Pioneered the adoption of cloud-native solutions under the Whole-of-Government (WoG) GCC 2.0",
+      "Full stack development of Monolithic and Microservices application",
+      "Developed reusable components, enhancing modularity and readability to improve the project's long-term maintainability",
       "Maintained of deployed application upon successful go-live, addressing and incorporating enhancement to ongoing business needs and relevance",
     ],
-    techUsed: workTech,
+    techUsed: ncsTech,
   },
   {
     companyName: "Onwards Media Group Pte Ltd",
@@ -173,19 +226,19 @@ export const experiences: Experiences[] = [
 ];
 
 const sortingVisualiserTech = technologies.filter((tech) =>
-  tech.projectTech?.includes("sortingVisualiser"),
+  tech.projectTech?.includes("sortingVisualiser")
 );
 
 const backendCodeStubTech = technologies.filter((tech) =>
-  tech.projectTech?.includes("backendCodeStub"),
+  tech.projectTech?.includes("backendCodeStub")
 );
 
 const codingNotesTech = technologies.filter((tech) =>
-  tech.projectTech?.includes("codingNotes"),
+  tech.projectTech?.includes("codingNotes")
 );
 
 const personalWebTech = technologies.filter((tech) =>
-  tech.projectTech?.includes("personalWeb"),
+  tech.projectTech?.includes("personalWeb")
 );
 export const projects = [
   {
