@@ -52,7 +52,7 @@ export const technologies: Technologies[] = [
   {
     name: "Jenkins",
     icon: "logos:jenkins",
-    domain: "language",
+    domain: "tools",
     roleUtilised: ["dbs"],
     projectTech: [],
   },
