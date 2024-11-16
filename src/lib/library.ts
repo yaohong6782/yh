@@ -189,18 +189,18 @@ export interface Experiences {
 }
 
 export const experiences: Experiences[] = [
-  {
-    companyName: "DBS Bank",
-    role: "SWE",
-    duration: "Jul 2024 - Present",
-    responsibility: [
-      "Engeering team for managing and aligning staging server configurations for Hong Kong team's pre-production environment requirements",
-      "Cut-over migration project for Cards and Payment Microservice API team",
-      "Designed and implemented an internal logging system for API calls, enabling detailed performance tracking and real-time issue monitoring",
-      "Leveraged Kafka for real-time data streaming pipeline to process high-volume events",
-    ],
-    techUsed: dbsTech,
-  },
+  // {
+  //   companyName: "DBS Bank",
+  //   role: "SWE",
+  //   duration: "Jul 2024 - Present",
+  //   responsibility: [
+  //     "Engineering team for managing and aligning staging server configurations for Hong Kong team's pre-production environment requirements",
+  //     "Cut-over migration project for Cards and Payment Microservice API team",
+  //     "Designed and implemented an internal logging system for API calls, enabling detailed performance tracking and real-time issue monitoring",
+  //     "Leveraged Kafka for real-time data streaming pipeline to process high-volume events",
+  //   ],
+  //   techUsed: dbsTech,
+  // },
   {
     companyName: "NCS Group",
     role: "SWE",
