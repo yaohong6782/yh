@@ -3,21 +3,31 @@ import type { Technologies } from "@src/lib/library";
 import { Icon } from "astro-icon/components";
 
 const { title, tech } = Astro.props;
-
 ---
+
 <div class="pt-4">
   <div>
-    <h2 class="text-xl font-semibold underline underline-offset-2 pb-4">{title}</h2>
+    <h2 class="text-xl font-semibold underline underline-offset-2 pb-4">
+      {title}
+    </h2>
   </div>
   <div class="grid grid-cols-10 md:grid-cols-4 md:grid-rows-2 gap-10">
-    {tech.map((item : Technologies) => (
-      <li class="list-none justify-start">
-        <div class="flex items-center justify-center mt-2">
-          <Icon name={item.icon} size={34}/>
-        </div>
-          <text class="flex justify-center text-md font-medium pt-2"> {item.name} </text>
-      </li>
-   ))}
-    
+    {
+      tech.map((item: Technologies) => (
+        <li class="list-none justify-start">
+          <div class="flex items-center justify-center mt-2">
+            <Icon
+              name={item.icon}
+              size={34}
+              class={item.invertOnDark ? "dark:invert" : ""}
+            />
+          </div>
+          <text class="flex justify-center text-md font-medium pt-2">
+            {" "}
+            {item.name}{" "}
+          </text>
+        </li>
+      ))
+    }
   </div>
 </div>

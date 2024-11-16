@@ -2,33 +2,40 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-import yhPfp from '@src/images/yhPfp.png';
-import type { Socials } from '@src/lib/library';
+import yhPfp from "@src/images/yhPfp.png";
+import yh from "@src/images/yh-photo.png";
+import yh1 from "@src/images/yaohong-me.jpg";
+import type { Socials } from "@src/lib/library";
 
-const { socials } = Astro.props
+const { socials } = Astro.props;
 ---
 
-  <!-- <section class=""> -->
-  <div class="">
-    <h1 class="text-5xl">
-      Hi! I'm 
-      <b>Yao Hong</b>
-    </h1>
-    <h2 class="font-patrick text-xl">software engineer</h2>
-    <div class="flex flex-row gap-2 pt-3">
-      {socials.map((social : Socials ) => (
+<!-- <section class=""> -->
+<div class="">
+  <h1 class="text-5xl">
+    Hi! I'm
+    <b>Yao Hong</b>
+  </h1>
+  <h2 class="font-patrick text-xl">software engineer</h2>
+  <div class="flex flex-row gap-2 pt-3">
+    {
+      socials.map((social: Socials) => (
         <a href={social.url} target="_blank" rel="noopener">
-        <Icon name={social.icon} size={28} class="transform-gpu hover:scale-110 cursor-pointer"/>
+          <Icon
+            name={social.icon}
+            size={28}
+            class="transform-gpu hover:scale-110 cursor-pointer"
+          />
         </a>
-      ))}
-    </div>
+      ))
+    }
   </div>
-  <Image src={yhPfp} alt="profile picture" class="rounded-full w-32 h-32"/>
+</div>
+<!-- <Image src={yh} alt="profile picture" class="rounded-lg w-52 h-52" /> -->
+<Image src={yh1} alt="profile picture" class="rounded-lg w-64 h-48" />
 <!-- </section> -->
 
-
-<style>
-</style>
+<style></style>
 <!-- .about-wrapper { -->
 <!--   height:100vh; -->
 <!-- } -->
