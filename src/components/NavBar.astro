@@ -1,47 +1,61 @@
 ---
-import '@fontsource/patrick-hand'
-import ThemeIcon from '@src/components/ThemeIcon.astro';
+import "@fontsource/patrick-hand";
+import ThemeIcon from "@src/components/ThemeIcon.astro";
 
 const sectionItems = [
   {
-    anchor:'#about',
-    name:"about"
-  }, 
-  {
-    anchor:'#experiences',
-    name: 'experiences'
+    anchor: "#about",
+    name: "about",
   },
   {
-    anchor:'#skills',
-    name:'skills'
+    anchor: "#experiences",
+    name: "experiences",
   },
   {
-    anchor:"#projects",
-    name: 'projects'
-  }
-]
-
+    anchor: "#skills",
+    name: "skills",
+  },
+  {
+    anchor: "#projects",
+    name: "projects",
+  },
+  {
+    anchor: "/YaoHong-Resume.pdf",
+    name: "resume",
+  },
+];
 ---
 
-
 <nav class="flex justify-between md:flex-row pl-2 pr-2">
-  <ul class="flex items-left items-center ">
-    <li class=" text-3xl hover:underline underline-offset-4 cursor-pointer font-patrick hover:scale-110">
-      <a href={"#introduction"}>
-        yao hong
-      </a>
+  <ul class="flex items-left items-center">
+    <li
+      class="text-3xl hover:underline underline-offset-4 cursor-pointer font-patrick hover:scale-110"
+    >
+      <a href={"#introduction"}> yao hong </a>
     </li>
   </ul>
-  <ul class="text-2xl gap-6 pt-3 flex right-item items-center md:flex-col font-patrick">
-    {sectionItems.map((section) => (
-      <li class="hover:underline underline-offset-4 cursor-pointer hover:scale-110" >
-        <a href={section.anchor}> 
-          {section.name}
-        </a>
-      </li>
-    ))}
-    <ThemeIcon/>
+  <ul
+    class="text-2xl gap-6 pt-3 flex right-item items-center md:flex-col font-patrick"
+  >
+    {
+      sectionItems.map((section) => (
+        <li class="hover:underline underline-offset-4 cursor-pointer hover:scale-110">
+          <a
+            target="_blank"
+            href={section.anchor}
+            rel="noopener noreferrer"
+            class={
+              section.name === "resume"
+                ? "border border-current px-2 py-1 rounded"
+                : ""
+            }
+          >
+            {section.name}
+          </a>
+        </li>
+      ))
+    }
+    <ThemeIcon />
   </ul>
 </nav>
-<style>
-</style>
+<style></style>
