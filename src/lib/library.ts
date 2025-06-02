@@ -14,10 +14,10 @@ export const socials: Socials[] = [
     url: "https://github.com/yaohong6782",
     icon: "cib:github",
   },
-  {
-    url: "https://www.linkedin.com/in/yao-hong/",
-    icon: "cib:linkedin",
-  },
+  //   {
+  //     url: "https://www.linkedin.com/in/yao-hong/",
+  //     icon: "cib:linkedin",
+  //   },
 ];
 
 export interface Technologies {
@@ -49,14 +49,13 @@ export const technologies: Technologies[] = [
     roleUtilised: ["ncs", "dbs", "misc"],
     projectTech: ["backendCodeStub"],
   },
-  {
-    name: "Jenkins",
-    icon: "logos:jenkins",
-    domain: "tools",
-    roleUtilised: ["dbs"],
-    projectTech: [],
-  },
-  // {},
+  //   {
+  //     name: "Jenkins",
+  //     icon: "logos:jenkins",
+  //     domain: "tools",
+  //     roleUtilised: ["dbs"],
+  //     projectTech: [],
+  //   },
   {
     name: "Python",
     icon: "logos:python",
@@ -115,7 +114,7 @@ export const technologies: Technologies[] = [
     icon: "logos:tailwindcss-icon",
     domain: "library",
     roleUtilised: ["misc"],
-    projectTech: ["sortingVisualiserTech", "codingNotes"],
+    projectTech: ["sortingVisualiserTech", "codingNotes", "budgetly"],
   },
   {
     name: "Spring",
@@ -152,13 +151,6 @@ export const technologies: Technologies[] = [
     domain: "tools",
     projectTech: [],
   },
-  // {
-  //   name: "Kafka",
-  //   icon: "logos:kafka",
-  //   roleUtilised: ["dbs"],
-  //   domain: "library",
-  //   projectTech: [],
-  // },
 ];
 
 export const language = technologies.filter(
@@ -189,18 +181,18 @@ export interface Experiences {
 }
 
 export const experiences: Experiences[] = [
-  // {
-  //   companyName: "DBS Bank",
-  //   role: "SWE",
-  //   duration: "Jul 2024 - Present",
-  //   responsibility: [
-  //     "Engineering team for managing and aligning staging server configurations for Hong Kong team's pre-production environment requirements",
-  //     "Cut-over migration project for Cards and Payment Microservice API team",
-  //     "Designed and implemented an internal logging system for API calls, enabling detailed performance tracking and real-time issue monitoring",
-  //     "Leveraged Kafka for real-time data streaming pipeline to process high-volume events",
-  //   ],
-  //   techUsed: dbsTech,
-  // },
+  {
+    companyName: "DBS Bank",
+    role: "SWE",
+    duration: "Jul 2024 - Present",
+    responsibility: [
+      "Cut-over migration project for Cards and Payment Microservice API team",
+      "Development of Microservice APIs serving as middleware gateway between internal teams and external services",
+      "Leveraged Kafka for real-time data streaming pipeline to process high-volume events",
+      "Created Python script to automate extraction of change request tag numbers from URLs, significantly reducing manual effort",
+    ],
+    techUsed: dbsTech,
+  },
   {
     companyName: "NCS Group",
     role: "SWE",
@@ -208,7 +200,7 @@ export const experiences: Experiences[] = [
     responsibility: [
       "Tech Refresh development of client's application to a maintainable framework and technology adhering to business requirements",
       "Pioneered the adoption of cloud-native solutions under the Whole-of-Government (WoG) GCC 2.0",
-      "Full stack development of Monolithic and Microservices application",
+      "Developed and Delivered full-stack development in alignment with newly modernized system architecture, improving operational processes and service efficiency",
       "Developed reusable components, enhancing modularity and readability to improve the project's long-term maintainability",
       "Maintained of deployed application upon successful go-live, addressing and incorporating enhancement to ongoing business needs and relevance",
     ],
@@ -241,7 +233,19 @@ const codingNotesTech = technologies.filter((tech) =>
 const personalWebTech = technologies.filter((tech) =>
   tech.projectTech?.includes("personalWeb")
 );
+
+const budgetlyTech = technologies.filter((tech) =>
+  tech.projectTech?.includes("budgetly")
+);
+
 export const projects = [
+  //   {
+  //     projectName: "Budgetly - Budget Tracking Application",
+  //     techUsed: budgetlyTech,
+  //     image: "",
+  //     demo: "",
+  //     github: "",
+  //   },
   {
     projectName: "Personal Website",
     techUsed: personalWebTech,
@@ -256,11 +260,4 @@ export const projects = [
     demo: "https://sorting-visualiser-738ffc.netlify.app/",
     github: "https://github.com/yaohong6782/sorting-visualiser",
   },
-  // {
-  //   projectName: "Coding Notes",
-  //   techUsed: codingNotesTech,
-  //   image: "",
-  //   demo: "",
-  //   github: "",
-  // },
 ];
