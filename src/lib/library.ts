@@ -3,6 +3,8 @@ import UnsortedImage from "@src/images/unsorted.png";
 import PersonalWebImage from "@src/images/personalWeb.png";
 import PersonalWebImage2 from "@src/images/personalWeb2.png";
 import PersonalWebImage3 from "@src/images/personalWeb3.png";
+import DarkPersonalWebImage from "@src/images/dark-mode-personal.png";
+import LightPersonalWebImage from "@src/images/light-mode-personal.png";
 
 export interface Socials {
   url: string;
@@ -186,7 +188,7 @@ export const experiences: Experiences[] = [
     role: "SWE",
     duration: "Jul 2024 - Present",
     responsibility: [
-      "Cards and Payments services team, developing RESTful APIs for card-related services in a large-scale migration project using Java Spring Boot",
+      "Cards and Payments services Back-end development team, developing RESTful APIs for card-related services in a large-scale migration project using Java Spring Boot",
       "Development of Microservice APIs serving as middleware gateway between internal teams and external services",
       "Created Python script to automate extraction of change request tag numbers from URLs, significantly reducing manual effort",
     ],
@@ -248,7 +250,7 @@ export const projects = [
   {
     projectName: "Personal Website",
     techUsed: personalWebTech,
-    image: [PersonalWebImage2],
+    image: [LightPersonalWebImage],
     demo: "",
     github: "https://github.com/yaohong6782/yh",
   },
