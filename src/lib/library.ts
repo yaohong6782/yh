@@ -186,9 +186,8 @@ export const experiences: Experiences[] = [
     role: "SWE",
     duration: "Jul 2024 - Present",
     responsibility: [
-      "Cut-over migration project for Cards and Payment Microservice API team",
+      "Cards and Payments services team, developing RESTful APIs for card-related services in a large-scale migration project using Java Spring Boot",
       "Development of Microservice APIs serving as middleware gateway between internal teams and external services",
-      "Leveraged Kafka for real-time data streaming pipeline to process high-volume events",
       "Created Python script to automate extraction of change request tag numbers from URLs, significantly reducing manual effort",
     ],
     techUsed: dbsTech,
