@@ -5,7 +5,8 @@ import PersonalWebImage2 from "@src/images/personalWeb2.png";
 import PersonalWebImage3 from "@src/images/personalWeb3.png";
 import DarkPersonalWebImage from "@src/images/dark-mode-personal.png";
 import LightPersonalWebImage from "@src/images/light-mode-personal.png";
-
+import FinanceAppDashboard from "@src/images/finance-app-dashboard.png";
+import FinacneAppTransactionPage from "@src/images/finance-app-transaction-page.png";
 export interface Socials {
   url: string;
   icon: string;
@@ -42,14 +43,14 @@ export const technologies: Technologies[] = [
     icon: "logos:typescript-icon",
     domain: "language",
     roleUtilised: ["ncs", "misc"],
-    projectTech: ["codingNotes"],
+    projectTech: ["codingNotes", "myExpense"],
   },
   {
     name: "Java",
     icon: "logos:java",
     domain: "language",
     roleUtilised: ["ncs", "dbs", "misc"],
-    projectTech: ["backendCodeStub"],
+    projectTech: ["backendCodeStub", "myExpense"],
   },
   //   {
   //     name: "Jenkins",
@@ -76,7 +77,7 @@ export const technologies: Technologies[] = [
     icon: "logos:react",
     domain: "library",
     roleUtilised: ["intern", "misc"],
-    projectTech: ["sortingVisualiser", "codingNotes"],
+    projectTech: ["sortingVisualiser", "codingNotes", "myExpense"],
   },
   {
     name: "Node",
@@ -103,7 +104,7 @@ export const technologies: Technologies[] = [
     icon: "logos:postgresql",
     domain: "tools",
     roleUtilised: ["misc"],
-    projectTech: ["codingNotes", "backendCodeStub"],
+    projectTech: ["codingNotes", "backendCodeStub", "myExpense"],
   },
   {
     name: "Git",
@@ -116,21 +117,21 @@ export const technologies: Technologies[] = [
     icon: "logos:tailwindcss-icon",
     domain: "library",
     roleUtilised: ["misc"],
-    projectTech: ["sortingVisualiserTech", "codingNotes", "budgetly"],
+    projectTech: ["sortingVisualiserTech", "codingNotes"],
   },
   {
     name: "Spring",
     icon: "logos:spring-icon",
     domain: "library",
     roleUtilised: ["ncs", "dbs", "misc"],
-    projectTech: ["backendCodeStub"],
+    projectTech: ["backendCodeStub", "myExpense"],
   },
   {
     name: "Docker",
     icon: "logos:docker-icon",
     domain: "tools",
     roleUtilised: ["misc", "ncs"],
-    projectTech: ["codingNotes"],
+    projectTech: ["codingNotes", "myExpense"],
   },
   {
     name: "NestJS",
@@ -235,18 +236,18 @@ const personalWebTech = technologies.filter((tech) =>
   tech.projectTech?.includes("personalWeb")
 );
 
-const budgetlyTech = technologies.filter((tech) =>
-  tech.projectTech?.includes("budgetly")
+const myExpenseTech = technologies.filter((tech) =>
+  tech.projectTech?.includes("myExpense")
 );
 
 export const projects = [
-  //   {
-  //     projectName: "Budgetly - Budget Tracking Application",
-  //     techUsed: budgetlyTech,
-  //     image: "",
-  //     demo: "",
-  //     github: "",
-  //   },
+  {
+    projectName: "MyExpense - Expense Tracking Application",
+    techUsed: myExpenseTech,
+    image: [FinanceAppDashboard, FinacneAppTransactionPage],
+    demo: "https://my-expense-lpmt.onrender.com/",
+    github: "https://github.com/yaohong6782/finance",
+  },
   {
     projectName: "Personal Website",
     techUsed: personalWebTech,
