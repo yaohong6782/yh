@@ -189,9 +189,10 @@ export const experiences: Experiences[] = [
     role: "SWE",
     duration: "Jul 2024 - Present",
     responsibility: [
-      "Contributed to a large-scale migration project for Cards and Payments, developing RESTful APIs using Java Spring Boot to support card-related services.",
-      "Development of Microservice APIs serving as middleware gateway between internal teams and external services",
-      "Automated operational workflows by building a Python script to extract change request tag numbers from URLs, reducing manual effort and improving operational efficiency.",
+      "Built and deployed RESTful APIs with Java Spring Boot as part of a large-scale Cards and Payments migration, ensuring seamless support for core card services.",
+      "Designed microservice APIs that acted as middleware between internal banking systems, VisionPLUS V10, and third-party providers, making the migration process smooth and reliable.",
+      "Automated routine workflows with a Python script that extracted change request tag numbers from URLs, cutting down manual work and improving team efficiency.",
+      "Worked with cross-functional teams to troubleshoot critical defects and optimized API performance through code refactoring and database improvements.",
     ],
     techUsed: dbsTech,
   },
