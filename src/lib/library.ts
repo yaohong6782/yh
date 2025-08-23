@@ -191,8 +191,9 @@ export const experiences: Experiences[] = [
     responsibility: [
       "Built and deployed RESTful APIs with Java Spring Boot as part of a large-scale Cards and Payments migration, ensuring seamless support for core card services.",
       "Designed microservice APIs that acted as middleware between internal banking systems, VisionPLUS V10, and third-party providers, making the migration process smooth and reliable.",
-      "Automated routine workflows with a Python script that extracted change request tag numbers from URLs, cutting down manual work and improving team efficiency.",
       "Worked with cross-functional teams to troubleshoot critical defects and optimized API performance through code refactoring and database improvements.",
+      "Led deployment change management by collating approved change requests, coordinating release schedules and securing approvals compliant to production deployments",
+      "Automated routine workflows with a Python script that extracted change request tag numbers from URLs, cutting down manual work and improving team efficiency.",
     ],
     techUsed: dbsTech,
   },
@@ -206,6 +207,7 @@ export const experiences: Experiences[] = [
       "Delivered full-stack solutions using React, Spring Boot, and AWS services, enhancing operational processes and system reliability.",
       "Developed reusable components consolidating 20 static pages into a single dynamic, configurable React component,, enhancing modularity and readability to improve the project's long-term maintainability",
       "Maintained of deployed application upon successful go-live, addressing and incorporating enhancement to ongoing business needs and relevance",
+      "Presented technical updates and proposed enhancement to clients aligning solutions and evolving business needs supporting recurring service engagement and revenue for the team",
     ],
     techUsed: ncsTech,
   },
