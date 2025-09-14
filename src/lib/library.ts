@@ -245,7 +245,7 @@ const myExpenseTech = technologies.filter((tech) =>
 
 export const projects = [
   {
-    projectName: "MyExpense - Expense Tracking Application",
+    projectName: "MyExpense - Expense Application",
     techUsed: myExpenseTech,
     image: [FinanceAppDashboard, FinacneAppTransactionPage],
     demo: "https://my-expense-lpmt.onrender.com/",
