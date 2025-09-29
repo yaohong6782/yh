@@ -140,20 +140,6 @@ export const technologies: Technologies[] = [
     domain: "library",
     projectTech: ["codingNotes"],
   },
-  {
-    name: "Confluence",
-    icon: "logos:confluence",
-    roleUtilised: ["dbs"],
-    domain: "tools",
-    projectTech: [],
-  },
-  {
-    name: "Jira",
-    icon: "logos:jira",
-    roleUtilised: ["dbs"],
-    domain: "tools",
-    projectTech: [],
-  },
 ];
 
 export const language = technologies.filter(
