@@ -52,17 +52,18 @@ const { projectName, techUsed, image, demo, github } = Astro.props;
         ))
       }
       <div class="flex items-end gap-4">
-        <a href={demo} target="_blank" rel="noopener" class="group">
-          <div
-            class="flex justify-center group-hover:-translate-y-2 duration-500"
-          >
-            <SquareArrowOutUpRight size={28} />
-          </div>
-          <text
-            class="opacity-50 text-md font-semibold group-hover:opacity-100 duration-300"
-            >Link</text
-          >
-        </a>
+        {
+          demo && demo !== "" && (
+            <a href={demo} target="_blank" rel="noopener" class="group">
+              <div class="flex justify-center group-hover:-translate-y-2 duration-500">
+                <SquareArrowOutUpRight size={28} />
+              </div>
+              <text class="opacity-50 text-md font-semibold group-hover:opacity-100 duration-300">
+                Link
+              </text>
+            </a>
+          )
+        }
 
         <a href={github} target="_blank" rel="noopener" class="group">
           <div

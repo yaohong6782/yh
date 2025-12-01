@@ -6,7 +6,8 @@ import PersonalWebImage3 from "@src/images/personalWeb3.png";
 import DarkPersonalWebImage from "@src/images/dark-mode-personal.png";
 import LightPersonalWebImage from "@src/images/light-mode-personal.png";
 import FinanceAppDashboard from "@src/images/finance-app-dashboard.png";
-import FinacneAppTransactionPage from "@src/images/finance-app-transaction-page.png";
+import FinanceeAppTransactionPage from "@src/images/finance-app-transaction-page.png";
+import BulletDestiny from "@src/images/bullet-destiny.png";
 export interface Socials {
   url: string;
   icon: string;
@@ -50,7 +51,7 @@ export const technologies: Technologies[] = [
     icon: "logos:java",
     domain: "language",
     roleUtilised: ["ncs", "dbs", "misc"],
-    projectTech: ["backendCodeStub", "myExpense"],
+    projectTech: ["backendCodeStub", "myExpense", "bulletDestiny"],
   },
   //   {
   //     name: "Jenkins",
@@ -179,7 +180,6 @@ export const experiences: Experiences[] = [
       "Designed microservice APIs that acted as middleware between internal banking systems, VisionPLUS V10, and third-party providers, making the migration process smooth and reliable.",
       "Worked with cross-functional teams to troubleshoot critical defects and optimized API performance through code refactoring and database improvements.",
       "Led deployment change management by collating approved change requests, coordinating release schedules and securing approvals compliant to production deployments",
-      "Automated routine workflows with a Python script that extracted change request tag numbers from URLs, cutting down manual work and improving team efficiency.",
     ],
     techUsed: dbsTech,
   },
@@ -229,13 +229,24 @@ const myExpenseTech = technologies.filter((tech) =>
   tech.projectTech?.includes("myExpense")
 );
 
+const bulletDestinyTech = technologies.filter((tech) =>
+  tech.projectTech?.includes("bulletDestiny")
+);
+
 export const projects = [
   {
     projectName: "MyExpense - Expense Application",
     techUsed: myExpenseTech,
-    image: [FinanceAppDashboard, FinacneAppTransactionPage],
+    image: [FinanceAppDashboard, FinanceeAppTransactionPage],
     demo: "https://my-expense-lpmt.onrender.com/",
     github: "https://github.com/yaohong6782/finance",
+  },
+  {
+    projectName: "Bullet Destiny",
+    techUsed: bulletDestinyTech,
+    image: [BulletDestiny],
+    demo: "",
+    github: "https://github.com/yaohong6782/mydestiny",
   },
   {
     projectName: "Personal Website",
