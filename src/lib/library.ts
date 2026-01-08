@@ -30,6 +30,7 @@ export interface Technologies {
   domain: "library" | "language" | "tools";
   roleUtilised: string[];
   projectTech?: string[];
+  invertOnDark?: boolean | null;
 }
 export const technologies: Technologies[] = [
   {
@@ -94,10 +95,17 @@ export const technologies: Technologies[] = [
     projectTech: ["personalWeb"],
   },
   {
-    name: "Swagger",
-    icon: "logos:swagger",
+    name: "AWS",
+    icon: "logos:aws",
     domain: "tools",
-    roleUtilised: ["work", "ncs", "dbs", "misc"],
+    roleUtilised: ["work", "ncs", "misc"],
+    projectTech: ["backendCodeStub"],
+  },
+  {
+    name: "Oracle Database",
+    icon: "logos:oracle",
+    domain: "tools",
+    roleUtilised: ["work", "dbs", "misc"],
     projectTech: ["backendCodeStub"],
   },
   {
@@ -141,6 +149,14 @@ export const technologies: Technologies[] = [
     domain: "library",
     projectTech: ["codingNotes"],
   },
+  {
+    name: "Fastify",
+    icon: "logos:fastify-icon",
+    roleUtilised: ["misc"],
+    domain: "library",
+    projectTech: ["codingNotes"],
+    invertOnDark: true,
+  },
 ];
 
 export const language = technologies.filter(
@@ -176,10 +192,10 @@ export const experiences: Experiences[] = [
     role: "SWE",
     duration: "Jul 2024 - Present",
     responsibility: [
-      "Built and deployed RESTful APIs with Java Spring Boot as part of a large-scale Cards and Payments migration, ensuring seamless support for core card services.",
-      "Designed microservice APIs that acted as middleware between internal banking systems, VisionPLUS V10, and third-party providers, making the migration process smooth and reliable.",
-      "Worked with cross-functional teams to troubleshoot critical defects and optimized API performance through code refactoring and database improvements.",
-      "Led deployment change management by collating approved change requests, coordinating release schedules and securing approvals compliant to production deployments",
+      "Built and deployed Spring Boot APIs supporting a large-scale Cards and Payments migration for core card services.",
+      "Designed middleware services integrating internal banking systems with VisionPLUS V10 and third-party providers.",
+      "Collaborated with cross-functional teams to resolve production issues and improve API and responses.",
+      "Coordinated deployment change management, ensuring releases complied with production and approval requirements from stakeholders.",
     ],
     techUsed: dbsTech,
   },
@@ -188,12 +204,11 @@ export const experiences: Experiences[] = [
     role: "SWE",
     duration: "Nov 2022 - Jun 2024",
     responsibility: [
-      "Tech Refresh development of client's application to a maintainable framework and technology adhering to business requirements",
-      "Core member for the adoption of cloud-native architectures under the Whole-of-Government (WoG) GCC",
-      "Delivered full-stack solutions using React, Spring Boot, and AWS services, enhancing operational processes and system reliability.",
-      "Developed reusable components consolidating 20 static pages into a single dynamic, configurable React component,, enhancing modularity and readability to improve the project's long-term maintainability",
-      "Maintained of deployed application upon successful go-live, addressing and incorporating enhancement to ongoing business needs and relevance",
-      "Presented technical updates and proposed enhancement to clients aligning solutions and evolving business needs supporting recurring service engagement and revenue for the team",
+      "Modernized client applications through tech refresh initiatives, migrating legacy solutions to maintainable frameworks aligned with business needs.",
+      "Contributed to cloud-native adoption under the Whole-of-Government (WoG) GCC standards.",
+      "Delivered end-to-end full-stack solutions using React, Spring Boot, and AWS, improving system reliability and operational workflows.",
+      "Built reusable and configurable React components, consolidating 20 static pages into a single dynamic module to improve long-term maintainability.",
+      "Supported post-go-live operations by maintaining deployed systems and implementing enhancements to meet evolving requirements.",
     ],
     techUsed: ncsTech,
   },
