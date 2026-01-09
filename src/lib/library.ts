@@ -102,7 +102,7 @@ export const technologies: Technologies[] = [
     projectTech: ["backendCodeStub"],
   },
   {
-    name: "Oracle Database",
+    name: "Oracle",
     icon: "logos:oracle",
     domain: "tools",
     roleUtilised: ["work", "dbs", "misc"],
