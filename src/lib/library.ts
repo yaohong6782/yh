@@ -160,23 +160,23 @@ export const technologies: Technologies[] = [
 ];
 
 export const language = technologies.filter(
-  (tech) => tech.domain === "language"
+  (tech) => tech.domain === "language",
 );
 export const libraries = technologies.filter(
-  (tech) => tech.domain === "library"
+  (tech) => tech.domain === "library",
 );
 export const tools = technologies.filter((tech) => tech.domain === "tools");
 
 const ncsTech = technologies.filter((tech) =>
-  tech.roleUtilised.includes("ncs")
+  tech.roleUtilised.includes("ncs"),
 );
 
 const dbsTech = technologies.filter((tech) =>
-  tech.roleUtilised.includes("dbs")
+  tech.roleUtilised.includes("dbs"),
 );
 
 const internTech = technologies.filter((tech) =>
-  tech.roleUtilised.includes("intern")
+  tech.roleUtilised.includes("intern"),
 );
 export interface Experiences {
   companyName: string;
@@ -192,10 +192,10 @@ export const experiences: Experiences[] = [
     role: "SWE",
     duration: "Jul 2024 - Present",
     responsibility: [
-      "Built and deployed Spring Boot APIs supporting a large-scale Cards and Payments migration for core card services.",
-      "Designed middleware services integrating internal banking systems with VisionPLUS V10 and third-party providers.",
-      "Collaborated with cross-functional teams to resolve production issues and improve API and responses.",
-      "Coordinated deployment change management, ensuring releases complied with production and approval requirements from stakeholders.",
+      "Built and deployed Spring Boot APIs supporting large-scale Cards and Payments migrations for core card services.",
+      "Designed middleware services integrating internal core banking systems with VisionPLUS V10 and external payment providers.",
+      "Performed production issue analysis using application logs, collaborating with engineering and operations teams to resolve integration and API-related incidents.",
+      "Led deployment change management by coordinating technical inputs and cross-stakeholder approvals, ensuring compliant and failure-free production releases.",
     ],
     techUsed: dbsTech,
   },
@@ -207,7 +207,7 @@ export const experiences: Experiences[] = [
       "Modernized client applications through tech refresh initiatives, migrating legacy solutions to maintainable frameworks aligned with business needs.",
       "Contributed to cloud-native adoption under the Whole-of-Government (WoG) GCC standards.",
       "Delivered end-to-end full-stack solutions using React, Spring Boot, and AWS, improving system reliability and operational workflows.",
-      "Built reusable and configurable React components, consolidating 20 static pages into a single dynamic module to improve long-term maintainability.",
+      "Built and introduced reusable and configurable React components, consolidating 20 static pages into a single dynamic module, with schema-based form validation (Yup) to enforce consistent data integrity and reduce frontend defects.",
       "Supported post-go-live operations by maintaining deployed systems and implementing enhancements to meet evolving requirements.",
     ],
     techUsed: ncsTech,
@@ -225,27 +225,27 @@ export const experiences: Experiences[] = [
 ];
 
 const sortingVisualiserTech = technologies.filter((tech) =>
-  tech.projectTech?.includes("sortingVisualiser")
+  tech.projectTech?.includes("sortingVisualiser"),
 );
 
 const backendCodeStubTech = technologies.filter((tech) =>
-  tech.projectTech?.includes("backendCodeStub")
+  tech.projectTech?.includes("backendCodeStub"),
 );
 
 const codingNotesTech = technologies.filter((tech) =>
-  tech.projectTech?.includes("codingNotes")
+  tech.projectTech?.includes("codingNotes"),
 );
 
 const personalWebTech = technologies.filter((tech) =>
-  tech.projectTech?.includes("personalWeb")
+  tech.projectTech?.includes("personalWeb"),
 );
 
 const myExpenseTech = technologies.filter((tech) =>
-  tech.projectTech?.includes("myExpense")
+  tech.projectTech?.includes("myExpense"),
 );
 
 const bulletDestinyTech = technologies.filter((tech) =>
-  tech.projectTech?.includes("bulletDestiny")
+  tech.projectTech?.includes("bulletDestiny"),
 );
 
 export const projects = [
