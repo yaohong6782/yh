@@ -194,6 +194,7 @@ export const experiences: Experiences[] = [
     responsibility: [
       "Built and deployed Spring Boot APIs supporting large-scale Cards and Payments migrations for core card services.",
       "Designed middleware services integrating internal core banking systems with VisionPLUS V10 and external payment providers.",
+      "Successfully delivered the migration of mainframe and vendor-dependent systems to a cloud-native platform, increasing in-house ownership and reducing vendor reliance, operational overhead, and long-term costs",
       "Performed production issue analysis using application logs, collaborating with engineering and operations teams to resolve integration and API-related incidents.",
       "Led deployment change management by coordinating technical inputs and cross-stakeholder approvals, ensuring compliant and failure-free production releases.",
     ],
@@ -209,6 +210,7 @@ export const experiences: Experiences[] = [
       "Delivered end-to-end full-stack solutions using React, Spring Boot, and AWS, improving system reliability and operational workflows.",
       "Built and introduced reusable and configurable React components, consolidating 20 static pages into a single dynamic module, with schema-based form validation (Yup) to enforce consistent data integrity and reduce frontend defects.",
       "Supported post-go-live operations by maintaining deployed systems and implementing enhancements to meet evolving requirements.",
+      "Proposed enhancement with regards to evolving business needs which supports recurring service engagement and revenue to the company",
     ],
     techUsed: ncsTech,
   },
