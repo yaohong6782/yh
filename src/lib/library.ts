@@ -193,8 +193,8 @@ export const experiences: Experiences[] = [
     duration: "Jul 2024 - Present",
     responsibility: [
       "Built and deployed Spring Boot APIs supporting large-scale Cards and Payments migrations for core card services.",
-      "Designed middleware services integrating internal core banking systems with VisionPLUS V10 and external payment providers.",
-      "Successfully delivered the migration of mainframe and vendor-dependent systems to a cloud-native platform, increasing in-house ownership and reducing vendor reliance, operational overhead, and long-term costs",
+      "Implement middleware services to serve internal core banking systems, retail consumers alongside external payment providers (VisionPLUS and PowerCard) .",
+      "Delivering migration of mainframe and vendor-dependent systems to a cloud-native platform, increasing in-house ownership and reducing vendor reliance, operational overhead, and long-term costs",
       "Performed production issue analysis using application logs, collaborating with engineering and operations teams to resolve integration and API-related incidents.",
       "Led deployment change management by coordinating technical inputs and cross-stakeholder approvals, ensuring compliant and failure-free production releases.",
     ],
