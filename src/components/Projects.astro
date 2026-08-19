@@ -1,52 +1,78 @@
 ---
+import { SquareArrowOutUpRight } from "@lucide/astro";
 import type { Technologies } from "@src/lib/library";
-import { Icon } from "astro-icon/components"
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
-
 const { projectName, techUsed, image, demo, github } = Astro.props;
 ---
 
-
-<div class="pt-4"> 
-  <div>
-    <h1 class="pt-2 text-xl font-semibold">
-      {projectName}
-    </h1>
-    {projectName === "Sorting Visualiser" && 
-      <div class="relative border flex justify-center">
-        <Image width={950} src={image[0]} alt="first image" class="aboslute top-0 w-full"/>
-        <Image width={950} src={image[1]} alt="second image" class="absolute top-0 w-full hover:opacity-0 duration-500"/>
-      </div>
+<div
+  class="flex flex-col h-full bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden border border-gray-100 dark:border-slate-700"
+>
+  <div
+    class="relative w-full h-48 overflow-hidden flex-shrink-0 bg-gray-100 dark:bg-slate-700"
+  >
+    <Image
+      width={400}
+      height={200}
+      src={image[0]}
+      alt="project image"
+      class="w-full h-full object-cover"
+    />
+    {
+      projectName === "Sorting Visualiser" && (
+        <Image
+          width={400}
+          height={200}
+          src={image[1]}
+          alt="second image"
+          class="absolute inset-0 w-full h-full object-cover hover:opacity-0 duration-500"
+        />
+      )
     }
-    {projectName !== "Sorting Visualiser" && 
-      <div class="relative flex justify-center border">
-        <Image width={950} src={image[0]} alt="sorted image" class="aboslute top-0 w-full"/>
-      </div>
-    }
-    <div class="flex gap-4 pt-2">
-      {techUsed.map((tech: Technologies) => (
-        <li class="group list-none">
-          <div class="flex items-center justify-center group-hover:-translate-y-2 duration-300">
-            <Icon name={tech.icon} size={28}/>
-          </div>
-          <text class="opacity-50 text-md font-semibold group-hover:opacity-100 duration-300">{tech.name}</text>
-        </li>
-      ))}
-      <div class="flex items-end gap-4">
-        <a href={demo} target="_blank" rel="noopener" class="group">
-          <div class="flex justify-center group-hover:-translate-y-2 duration-500">
-            <Icon name="carbon:demo" size={28}/>
-          </div>
-          <text class="opacity-50 text-md font-semibold group-hover:opacity-100 duration-300">Link</text>
-        </a>
+  </div>
 
-        <a href={github} target="_blank" rel="noopener" class="group">
-          <div class="flex justify-center group-hover:-translate-y-2 duration-500">
-            <Icon name="cib:github" size={28}/>
-          </div>
-          <text class="opacity-50 text-md font-semibold group-hover:opacity-100 duration-300">Github</text>
-        </a>
-      </div>
+  <div class="flex flex-col flex-1 p-4 gap-3">
+    <h1 class="text-lg font-semibold">{projectName}</h1>
+
+    <div class="flex flex-wrap gap-x-4 gap-y-3 flex-1 content-start">
+      {
+        techUsed.map((tech: Technologies) => (
+          <li class="list-none">
+            <div class="flex items-center justify-center peer hover:-translate-y-2 duration-300">
+              <Icon name={tech.icon} size={24} />
+            </div>
+            <span class="opacity-50 text-sm font-semibold peer-hover:opacity-100 duration-300">
+              {tech.name}
+            </span>
+          </li>
+        ))
+      }
+    </div>
+
+    <div class="flex gap-4 pt-2 border-t border-gray-100 dark:border-slate-700">
+      {
+        demo && demo !== "" && (
+          <a href={demo} target="_blank" rel="noopener" class="group">
+            <div class="flex justify-center group-hover:-translate-y-2 duration-500">
+              <SquareArrowOutUpRight size={22} />
+            </div>
+            <span class="opacity-50 text-sm font-semibold group-hover:opacity-100 duration-300">
+              Link
+            </span>
+          </a>
+        )
+      }
+      <a href={github} target="_blank" rel="noopener">
+        <div class="flex justify-center peer hover:-translate-y-2 duration-500">
+          <Icon name="cib:github" size={22} />
+        </div>
+        <span
+          class="opacity-50 text-sm font-semibold peer-hover:opacity-100 duration-300"
+        >
+          Github
+        </span>
+      </a>
     </div>
   </div>
 </div>

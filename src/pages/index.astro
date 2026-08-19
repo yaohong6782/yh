@@ -1,90 +1,199 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import NavBar from '@src/components/NavBar.astro';
-import Introduction from '@src/components/Introduction.astro';
-import Experiences from '@src/components/Experiences.astro';
-import Projects from '@src/components/Projects.astro';
-import About from '@src/components/About.astro';
-import Skills from '@src/components/Skills.astro';
+import Layout from "../layouts/Layout.astro";
+import NavBar from "@src/components/NavBar.astro";
+import Introduction from "@src/components/Introduction.astro";
+import Experiences from "@src/components/Experiences.astro";
+import Projects from "@src/components/Projects.astro";
+import About from "@src/components/About.astro";
+import Skills from "@src/components/Skills.astro";
 
 import "@fontsource-variable/figtree";
 
-import { socials, experiences, projects, language, libraries, tools} from "@src/lib/library.ts";
-
+import {
+  socials,
+  experiences,
+  projects,
+  language,
+  libraries,
+  tools,
+} from "@src/lib/library.ts";
 ---
 
 <Layout title="Yao Hong">
   <div class="border-b pb-2 lg:sticky top-0 z-50 bg-white dark:bg-slate-900">
     <div class="p-2 m-auto w-full xl:max-w-[1480px] md:max-w-screen-md">
-      <NavBar/>
+      <NavBar />
     </div>
   </div>
   <main class="px-6 pb-4 m-auto relative w-full xl:max-w-5xl">
-    <section id="introduction" class="about-wrapper flex gap-12 items-center justify-around">
-      <Introduction socials={socials}/>
+    <section
+      id="introduction"
+      class="about-wrapper flex gap-12 items-center justify-around"
+    >
+      <Introduction socials={socials} />
     </section>
 
     <section id="about" class="pb-4 pt-4 scroll-my-16">
       <div class="flex items-center gap-4">
         <h1 class="text-3xl">About</h1>
-        <div class="w-screen border-b-black border-b-2 dark:border-b-white"></div>
+        <div class="w-screen border-b-black border-b-2 dark:border-b-white">
+        </div>
       </div>
-      <About/>
+      <About />
     </section>
     <section id="experiences" class="pb-4 pt-4 scroll-my-16">
       <div class="flex items-center gap-4">
         <h1 class="text-3xl">Experiences</h1>
-        <div class="w-screen border-b-black border-b-2 dark:border-b-white"></div>
+        <div class="w-screen border-b-black border-b-2 dark:border-b-white">
+        </div>
       </div>
       {
-      experiences.map((experience) => (
-        <Experiences 
-          companyName={experience.companyName}
-          role={experience.role}
-          duration={experience.duration}
-          responsibility={experience.responsibility}
-          techUsed={experience.techUsed}
-        /> 
-      ))
+        experiences.map((experience) => (
+          <Experiences
+            companyName={experience.companyName}
+            role={experience.role}
+            duration={experience.duration}
+            responsibility={experience.responsibility}
+            techUsed={experience.techUsed}
+          />
+        ))
       }
     </section>
     <section id="skills" class="pb-4 pt-4 scroll-my-16">
       <div class="flex items-center gap-4">
-        <h1 class="text-3xl">Skills</h1>     
-      <div class="w-screen border-b-black border-b-2 dark:border-b-white"></div>
+        <h1 class="text-3xl">Skills</h1>
+        <div class="w-screen border-b-black border-b-2 dark:border-b-white">
+        </div>
       </div>
-      <Skills title="Languages" tech={language}/>
-      <Skills title="Libraries & Frameworks" tech={libraries}/>
-      <Skills title="Tools" tech={tools}/>
+      <Skills title="Languages" tech={language} />
+      <Skills title="Libraries & Frameworks" tech={libraries} />
+      <Skills title="Tools" tech={tools} />
     </section>
 
-    <section id="projects" class="pb-4 pt-4 scroll-my-16">
-      <skills title="tools" tech={tools}/>
+    <!-- <section id="projects" class="pb-4 pt-4 scroll-my-16">
+      <skills title="tools" tech={tools}></skills>
       <div class="flex items-center gap-4">
-        <h1 class="text-3xl">Projects</h1>     
-        <div class="w-screen border-b-black border-b-2 dark:border-b-white"></div>
+        <h1 class="text-3xl">Projects</h1>
+        <div class="w-screen border-b-black border-b-2 dark:border-b-white">
+        </div>
       </div>
       {
-      projects.map((project: any) => (
-        <Projects
-          projectName={project.projectName}
-          techUsed={project.techUsed}
-          image={project.image}
-          demo={project.demo}
-          github={project.github}
-        />
-      ))
+        projects.map((project: any) => (
+          <Projects
+            projectName={project.projectName}
+            techUsed={project.techUsed}
+            image={project.image}
+            demo={project.demo}
+            github={project.github}
+          />
+        ))
       }
+    </section> -->
+    <section id="projects" class="pb-4 pt-4 scroll-my-16">
+      <div class="flex items-center gap-4 mb-4">
+        <h1 class="text-3xl">Projects</h1>
+        <div class="w-screen border-b-black border-b-2 dark:border-b-white">
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden group">
+        <button
+          id="proj-prev"
+          aria-label="Previous"
+          class="absolute left-0 top-1/2 -translate-y-1/2 z-10
+             opacity-0 group-hover:opacity-100 transition-opacity
+             bg-white dark:bg-black border-2 border-black dark:border-white
+             w-10 h-10 flex items-center justify-center
+             hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black cursor-pointer"
+        >
+          &#8592;
+        </button>
+        <button
+          id="proj-next"
+          aria-label="Next"
+          class="absolute right-0 top-1/2 -translate-y-1/2 z-10
+             opacity-0 group-hover:opacity-100 transition-opacity
+             bg-white dark:bg-black border-2 border-black dark:border-white
+             w-10 h-10 flex items-center justify-center
+             hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black cursor-pointer"
+        >
+          &#8594;
+        </button>
+
+        <div class="projects-track flex gap-6 w-max" id="projects-track">
+          {
+            [...projects, ...projects].map((project: any) => (
+              <div class="w-[320px] shrink-0">
+                <Projects
+                  projectName={project.projectName}
+                  techUsed={project.techUsed}
+                  image={project.image}
+                  demo={project.demo}
+                  github={project.github}
+                />
+              </div>
+            ))
+          }
+        </div>
+      </div>
     </section>
   </main>
 </Layout>
 
 <style is:global>
-.about-wrapper {
-  height:100vh;
-}
-main {
-  padding:0;
-  margin:0rem;
-}
+  .about-wrapper {
+    height: 100vh;
+  }
+  main {
+    padding: 0;
+    margin: 0rem;
+  }
+
+  .projects-track {
+    animation: scroll-x 30s linear infinite;
+  }
+
+  .projects-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll-x {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 </style>
+
+<script>
+  const track = document.getElementById("projects-track") as HTMLElement;
+  const prevBtn = document.getElementById("proj-prev");
+  const nextBtn = document.getElementById("proj-next");
+
+  const CARD_WIDTH = 320 + 24; // card + gap-6
+
+  function getCurrentX() {
+    return new DOMMatrix(getComputedStyle(track).transform).m41;
+  }
+
+  function jumpTo(targetX: number) {
+    const halfWidth = track.scrollWidth / 2;
+    // wrap around
+    if (targetX > 0) targetX -= halfWidth;
+    if (targetX < -halfWidth) targetX += halfWidth;
+
+    const progress = Math.abs(targetX) / halfWidth;
+    const duration = 30;
+
+    track.style.animation = "none";
+    track.style.transform = `translateX(${targetX}px)`;
+    requestAnimationFrame(() => {
+      track.style.animation = `scroll-x ${duration}s ${-progress * duration}s linear infinite`;
+    });
+  }
+
+  prevBtn?.addEventListener("click", () => jumpTo(getCurrentX() + CARD_WIDTH));
+  nextBtn?.addEventListener("click", () => jumpTo(getCurrentX() - CARD_WIDTH));
+</script>
