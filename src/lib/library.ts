@@ -205,9 +205,9 @@ export const experiences: Experiences[] = [
     role: "SWE",
     duration: "Jul 2024 - Present",
     responsibility: [
-        "Migration of Cards and Payments services from mainframe to in-house dependent",
-        "ETL pipeline to extract and transform network traffic for API replay system",
-        "Lead deployment of production change management and approvals"
+      "Migration of Cards and Payments services from mainframe to in-house dependent",
+      "ETL pipeline to extract and transform network traffic for API replay system",
+      "Lead deployment of production change management and approvals",
     ],
     techUsed: dbsTech,
   },
