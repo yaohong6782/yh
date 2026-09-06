@@ -205,11 +205,9 @@ export const experiences: Experiences[] = [
     role: "SWE",
     duration: "Jul 2024 - Present",
     responsibility: [
-      "Built and deployed Spring Boot APIs supporting large-scale Cards and Payments migrations for core card services.",
-      "Implement middleware services to serve internal core banking systems, retail consumers alongside external payment providers (VisionPLUS and PowerCard) .",
-      "Migration of mainframe and vendor-dependent systems to a cloud-native platform, increasing in-house ownership and reducing vendor reliance, operational overhead, and long-term costs",
-      "Performed production issue analysis using application logs, collaborating with engineering and operations teams to resolve integration and API-related incidents.",
-      "Led deployment change management by coordinating technical inputs and cross-stakeholder approvals, ensuring compliant and failure-free production releases.",
+        "Migration of Cards and Payments services from mainframe to in-house dependent",
+        "ETL pipeline to extract and transform network traffic for API replay system",
+        "Lead deployment of production change management and approvals"
     ],
     techUsed: dbsTech,
   },
@@ -218,11 +216,8 @@ export const experiences: Experiences[] = [
     role: "SWE",
     duration: "Nov 2022 - Jun 2024",
     responsibility: [
-      "Modernized client applications through tech refresh initiatives, migrating legacy solutions to maintainable frameworks aligned with business needs improving SLA resolution.",
-      "Contributed to cloud-native adoption under the Whole-of-Government (WoG) GCC standards.",
+      "Cloud-native adoption under the Whole-of-Government (WoG) GCC standards.",
       "Delivered end-to-end full-stack solutions using React, Spring Boot, and AWS, improving system reliability and operational workflows.",
-      "Built and introduced reusable and configurable React components, consolidating 20 static pages into a single dynamic module, with schema-based form validation (Yup) to enforce consistent data integrity and reduce frontend defects.",
-      "Supported post-go-live operations by maintaining deployed systems and implementing enhancements to meet evolving requirements.",
       "Proposed enhancement with regards to evolving business needs which supports recurring service engagement and revenue to the company",
     ],
     techUsed: ncsTech,
